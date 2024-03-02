@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontello -->
+    <link rel="stylesheet" href="/materials/fontello/css/fontello.css"">
+    
+
+    <title>Kacper Wasiak - Portfolio programisty</title>
+</head>
+<body>
+    <section id="container">
+        <article id="homePage">
+            <div id="left">
+                <h1>Kacper Wasiak</h1>
+                <h2>Frontend Developer</h2>
+
+                <div id="buttonsWrapper">
+
+                    <a href="https://www.facebook.com/kacper.wasiak.9216?locale=pl_PL" target="_blank">
+                        <button id="fb" class="socials"><i class="icon-facebook"></i></button>
+                    </a>
+
+                    <a href="https://www.instagram.com/kacper_wasiak/" target="_blank">
+                        <button id="ig" class="socials"><i class="icon-instagram"></i></button>
+                    </a>
+
+                    <a href="https://github.com/WasiakKacper" target="_blank">
+                        <button id="gh" class="socials"><i class="icon-github-circled"></i></button>
+                    </a>
+
+                </div>
+            </div>
+            <div id="right">
+                <img src="materials/avatar.png" alt="Kacper Wasiak zdjęcie">
+            </div>
+        </article>
+
+        <article id="projects">
+            <h2>Projekty</h2>
+
+            <div id="projectWrapper">
+                <div id="portfolio" class="project">
+
+                    <img src="materials/Portfolio.png" alt="Strona Portfolio">
+
+                    <h3>Portfolio</h3>
+
+                    <p>Strona portfolio została stworzona za pomocą HTML, CSS oraz JS, a zaprojektowana w Figmie. Strona ma na celu w prosty sposób przedstawić moje projekty.</p>
+
+                    <div class="buttons">
+                        <a href="">Zobacz stronę</a>
+                        <a href="">Zobacz kod</a>
+                    </div>
+                </div>
+
+                <div id="weather" class="project">
+                    
+                    <img src="materials/weather.png" alt="Strona Weather">
+
+                    <h3>.Weather</h3>     
+
+                    <p>.Weather to aplikacja pogodowa wyświetlająca dane pogodowe dla danej miejscowości. Stworzona za pomocą HTML, CSS, JS oraz API od Openweather. Projekt strony został wykonany w Figmie. Strona korzysta z frameworka Bootstrap. </p>
+
+                    <div class="buttons">
+                        <a href="">Zobacz stronę</a>
+                        <a href="">Zobacz kod</a>
+                    </div>
+                </div>
+
+                <div id="todolist" class="project">
+
+                    <img src="materials/todolist.png" alt="Strona To do list">
+
+                    <h3>.ToDoList</h3>      
+
+                    <p>.ToDoList to aplikacja do planowania zadań. Stworzona za pomocą HTML, CSS i JS. Została zaprojektowana w FIgmie. Strona używa frameworka Bootstrap. </p>
+
+                    <div class="buttons">
+                        <a href="">Zobacz stronę</a>
+                        <a href="">Zobacz kod</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="navigation">
+            <div id="arrow-up">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </div>
+            <div id="arrow-down" class="active">
+                <span class="material-symbols-outlined">arrow_downward</span>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+</html>
