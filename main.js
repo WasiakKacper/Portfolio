@@ -13,24 +13,4 @@ window.addEventListener('scroll', ()=>{
     }
 });
 
-function navigation(){
-    let value = window.scrollY;
 
-   if(value == 0){
-    arrowDown.addEventListener('click', ()=>{
-        window.scroll(0.980);
-    });
-   }
-
-   if(value == 980){
-    arrowDown.addEventListener('click', ()=>{
-        window.scroll(0.1500);
-    });
-
-    arrowUp.addEventListener('click', ()=>{
-        window.scroll(0.0);
-    });
-   }
-}
-
-navigation();

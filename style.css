@@ -77,9 +77,9 @@ body{
     font-weight: 500;
 }
 
-/* portfolio */
+/* porojects */
 #projects{
-    margin: 5% 5% 10% 5%;
+    margin: 5% 5% 25% 5%;
 }
 
 #projects h2{
@@ -140,6 +140,35 @@ body{
     border-radius: 2em;
     font-size: 1.2em;
     transition: 300ms ease;
+}
+
+/* about me */
+#about h2{
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 5%;
+    font-size: 3em; 
+}
+
+#about #wrapper{
+    background-color: var(--lightFont);
+    color: var(--darkFont);
+    display: flex;
+    flex-direction: row;
+    margin: 0 20% 9% 20%;
+    border-radius: 2em;
+}
+
+#about #wrapper img{
+    border-radius: 2em 0 0 2em;
+    margin-right: 10%;
+}
+
+#about #wrapper p{
+    width: 40%;
+    font-size: 2em;
+    text-align: left;
+    margin-top: 10%;
 }
 
 /* ANIMATION */
