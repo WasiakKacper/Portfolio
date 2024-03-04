@@ -37,21 +37,41 @@ body{
     margin-top: 12%;
 }
 
+#homePage #headerWrapper{
+    height: 50%;
+}
+
 #homePage h1{
     font-weight: 500;
     font-size: 4em;
     margin: 0;
+    animation: write 2s steps(13);
 }
 
 #homePage h2{
-    text-align: center;
+    text-align: left;
     font-weight: 400;
     margin-bottom: 7%;
-    font-size: 3em;
+    font-size: 3.1em;
+}
+
+#homePage h1 span#cursor{
+    font-size: .8em;
+    animation: blink 1s linear infinite;
+}
+
+#homePage h2 span#cursor{
+    font-size: .8em;
+    animation: blink 1s linear infinite;
+}
+
+#homePage #right{
+    width: auto;
 }
 
 #homePage #right img{
     transition: 300ms ease;
+    animation: showHome 1s ease-in;
 }
 
 #homePage #buttonsWrapper{
@@ -59,6 +79,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 300px;
 }
 
 #homePage #buttonsWrapper .socials{
@@ -80,6 +101,7 @@ body{
 /* porojects */
 #projects{
     margin: 5%;
+    padding-bottom: 10%;
 }
 
 #projects h2{
@@ -105,6 +127,15 @@ body{
     padding: 1%; 
     display: flex;
     flex-direction: column;
+
+    transition: 500ms ease;
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+.project.active{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .project h3{
@@ -155,7 +186,7 @@ body{
     color: var(--darkFont);
     display: flex;
     flex-direction: row;
-    margin: 0 20% 9% 20%;
+    margin: 0 20% 7% 20%;
     border-radius: 2em;
 }
 
@@ -172,6 +203,18 @@ body{
 }
 
 /* ANIMATION */
+@keyframes blink{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
 #navigation{
     position: fixed;
     bottom: -2%;
@@ -232,6 +275,7 @@ body{
     50%{transform: translateY(-20%);}
     100%{transform: translateY(0%);}
 }
+
 
 /* HOVER */
 @media not all and (hover: none){
