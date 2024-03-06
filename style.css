@@ -69,9 +69,14 @@ body{
     width: auto;
 }
 
-#homePage #right img{
-    transition: 300ms ease;
+#homePage #right img#avatar{
+    transition: 500ms ease;
     animation: showHome 1s ease-in;
+    transform: translateX(-90%);
+}
+
+#homePage #right img#avatar.active{
+    transform: translateX(0%);
 }
 
 #homePage #buttonsWrapper{
@@ -80,6 +85,15 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     width: 300px;
+
+    transition: 300ms ease;
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+#homePage #buttonsWrapper.active{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 #homePage #buttonsWrapper .socials{
@@ -188,6 +202,15 @@ body{
     flex-direction: row;
     margin: 0 20% 7% 20%;
     border-radius: 2em;
+
+    transition: 500ms ease;
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+#about #wrapper.active{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 #about #wrapper img{
@@ -291,11 +314,17 @@ body{
         background-color: var(--lightFont);
     }
 
-    #homePage #right img:hover{
+    #homePage #right img#avatar:hover{
         transform: scale(1.05);
     }
 
     .buttons a:hover{
         transform: translateY(-7%);
     }
+}
+
+/* ANOTHER DEVICES */
+
+@media only screen and(max-width: 1300px){
+
 }
