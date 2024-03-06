@@ -1,3 +1,4 @@
+/* NAVIGATION */
 const arrowUp = document.getElementById("arrow-up");
 const arrowDown = document.getElementById("arrow-down");
 
@@ -19,7 +20,6 @@ window.addEventListener('scroll', ()=>{
     }
 });
 
-/* NAVIGATION */
 arrowDown.addEventListener('click', ()=>{
     let value = window.scrollY;
 
@@ -57,7 +57,7 @@ arrowUp.addEventListener('click', ()=>{
 /* LOADING */
 function sleep(ms){
     return new Promise((resolve) => setTimeout(resolve, ms));
-    }
+}
 
 const text = "Kacper Wasiak";
 const el = document.getElementById("header");
