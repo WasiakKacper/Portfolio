@@ -26,7 +26,7 @@
 
     <title>Kacper Wasiak - Portfolio programisty</title>
 </head>
-<body onscroll="showProject()">
+<body>
     <section id="container" class="container-fluid">
 
         <article id="homePage">
@@ -60,8 +60,8 @@
         <article id="projects">
             <h2>Projekty</h2>
 
-            <div id="projectWrapper">
-                <div id="portfolio" class="project">
+            <div id="projectWrapper" class="row">
+                <div id="portfolio" class="project col-xl-3">
 
                     <img id="avatar" src="materials/Portfolio.png" alt="Strona Portfolio">
 
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <div id="weather" class="project">
+                <div id="weather" class="project col-xl-3">
                     
                     <img src="materials/weather.png" alt="Strona Weather">
 
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <div id="todolist" class="project">
+                <div id="todolist" class="project col-xl-3">
 
                     <img src="materials/todolist.png" alt="Strona To do list">
 
@@ -108,12 +108,21 @@
         <article id="about">
             <h2>O mnie</h2>
             <div id="wrapper">
-                <img src="materials/Kacper.png" alt="Kacper Wasiak">
-                <p>Nazywam się Kacper mam 19 lat. Jestem uczniem 5 klasy technikum informatycznego. Programowaniem zajmuję się od drugiej połowy 2022 roku. 
-                    Interesuję się piłką siatkową w którą gram od 2021 roku oraz grą na gitarze. 
-                    <br><br>
-                    Moją naukę programowania rozpocząłem od nauki HTML i CSS, następnie opanowałem framework Bootstrap i język JavaScript. Teraz zaczynam naukę Reacta oraz GIT-a.</p>
+                <p id="paragraf">Mam na imię Kacper jestem uczniem V klasy technikum informatycznego.  Tworzeniem stron internetowych zajmuję się od drugiej połowy 2022 roku. Poza programowaniem lubię grać na gitarze i uprawiać sport.</p>
+
+                <img id="image" src="materials/AboutMeSticker.png" alt="Kacper Wasiak" >
             </div>
+        </article>
+
+        <article id="contact">
+            <h2>Kontakt</h2>
+
+            <p id="p1">Jeśli chcesz żebym stworzył dla ciebie stronę internetową
+                zapraszam do kontaktu pod adresem:</p>
+            <p id="p2">wasiak.kacper11@gmail.com</p>
+
+            <button>Skopiuj e-mail</button>
+            
         </article>
 
         <div id="navigation">

@@ -1,59 +1,3 @@
-/* NAVIGATION */
-const arrowUp = document.getElementById("arrow-up");
-const arrowDown = document.getElementById("arrow-down");
-
-window.addEventListener('scroll', ()=>{
-    let value = window.scrollY;
-
-    if(value > 500){
-        arrowUp.classList.add("active");
-    }
-    else{
-        arrowUp.classList.remove("active");
-    }
-
-    if(value > 1800){
-        arrowDown.classList.remove("active");
-    }
-    else{
-        arrowDown.classList.add("active");
-    }
-});
-
-arrowDown.addEventListener('click', ()=>{
-    let value = window.scrollY;
-
-    if(value >= 0 && value < 980){
-            window.scrollTo({
-                top: 980,
-                behavior: "smooth"
-            })
-        }
-    else if(value >= 980){
-        window.scrollTo({
-            top: 2250,
-            behavior: "smooth"
-        })
-    }
-});
-
-arrowUp.addEventListener('click', ()=>{
-    let value = window.scrollY;
-
-    if(value <= 980 && value < 1400){
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
-    else if(value <= 2250){
-        window.scrollTo({
-            top: 980,
-            behavior: "smooth"
-        })
-    }
-});
-
 /* LOADING */
 function sleep(ms){
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -94,25 +38,29 @@ const writeLower = async ()=>{
 }
 writeLower()
 
-/* PARALAX ANIMATIONS */
- const portfolioTile = document.getElementById("portfolio");
- const weatherTile = document.getElementById("weather");
- const todolistTile = document.getElementById("todolist");
- const aboutMe = document.getElementById("wrapper");
+/* PARALAX EVENTS */
 
-function showProject(){
+/* NAVIGATION */
+const arrowUp = document.getElementById("arrow-up");
+const arrowDown = document.getElementById("arrow-down");
+
+const home = document.getElementById("homePage");
+const project = document.getElementById("projects").offsetTop;
+const contact = document.getElementById("contact");
+
+window.addEventListener('scroll', ()=>{
     let value = window.scrollY;
 
-    if(value >= 980){
-        portfolioTile.classList.add("active");
-        weatherTile.classList.add("active");
-        todolistTile.classList.add("active");
+    if(project){
+        arrowUp.classList.add("active");
     }
+    else if(home){
+        arrowUp.classList.remove("active");
+    }
+});
+/* scrolling to each section */
 
-    if(value >= 1900){
-        aboutMe.classList.add("active");
-    }
- }
+
 
 
 
