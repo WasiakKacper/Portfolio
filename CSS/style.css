@@ -117,11 +117,20 @@ body.active{
     padding: 5% 0% 10% 0%;
 }
 
-#projects h2{
+#projects h2#projectsHeader{
     text-align: center;
     font-weight: 400;
     margin-bottom: 7%;
     font-size: 3em; 
+
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 300ms ease;
+}
+
+#projects h2#projectsHeader.active{
+    opacity: 100;
+    transform: translateY(0px);
 }
 
 #projectWrapper{
@@ -194,12 +203,21 @@ body.active{
     color: var(--darkFont);
 }
 
-#about h2{
+#about h2#aboutHeader{
     text-align: center;
     font-weight: 400;
     margin-bottom: 5%;
     font-size: 3em; 
     color: var(--lightFont);
+
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 300ms ease;
+}
+
+#about h2#aboutHeader.active{
+    opacity: 100;
+    transform: translateY(0px);
 }
 
 #about #wrapper{
@@ -248,11 +266,20 @@ body.active{
     color: var(--lightFont);
 }
 
-#contact h2{
+#contact h2#contactHeader{
     text-align: center;
     font-weight: 400;
     margin-bottom: 5%;
     font-size: 3em; 
+
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 300ms ease;
+}
+
+#contact h2#contactHeader.active{
+    opacity: 100;
+    transform: translateY(0px);
 }
 
 #contact p#p1{
@@ -377,107 +404,4 @@ body.active{
     #contact button:hover{
         transform: translateY(-5px);
     }
-}
-
-/* ANOTHER DEVICES */
-/* tablet view */
-@media only screen and (max-width: 1300px){
-    /* home */
-    #homePage{
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
-        justify-content: center;
-        margin: 10% 0% 15% 0%;
-    }
-
-    #homePage #right img#avatar{
-        width: auto;
-        transition: 500ms ease;
-        transform: translate(0, 150px);
-    }
-
-    #homePage #right img#avatar.active{
-        width: auto;
-        transition: 500ms ease;
-        transform: translate(0, 0px);
-    }
-
-    #homePage #left{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 12%;
-    }
-
-    #homePage #headerWrapper{
-        height: 110px;
-    }
-    
-    #homePage h1{
-        text-align: center;
-        font-weight: 500;
-        font-size: 4em;
-        margin: 0;
-    }
-    
-    #homePage h2{
-        text-align: center;
-        font-weight: 400;
-        margin-bottom: 7%;
-        font-size: 3.1em;
-    }
-
-    #homePage #buttonsWrapper{
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-        margin-top: 5%;
-    
-        transition: 300ms ease;
-        opacity: 0;
-        transform: translateY(150px);
-    }
-
-    /* projects */
-
-    #projectWrapper{
-        transition: 500ms ease;
-        opacity: 0;
-        transform: translateY(150px);
-    }
-
-    #projectWrapper.active{
-        transition: 500ms ease;
-        opacity: 1;
-        transform: translateY(0px);
-    }
-
-    .project{
-        background-color: var(--lightFont);
-        width: 28%;
-        text-align: left;
-        text-wrap: wrap;
-        border-radius: 20px;   
-        padding: 2%; 
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5%;
-    }
-
-    .project img{
-        width: 100%;
-        height: auto;
-        scale: 0.97;
-    }
-
-    .buttons{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    /* about */
 }
