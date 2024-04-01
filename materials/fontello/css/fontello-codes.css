@@ -1,4 +1,6 @@
 
 .icon-github-circled:before { content: '\e800'; } /* '' */
+.icon-down:before { content: '\e801'; } /* '' */
+.icon-up:before { content: '\e802'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-facebook:before { content: '\f30c'; } /* '' */
