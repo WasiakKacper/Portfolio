@@ -33,10 +33,23 @@ const writeLower = async ()=>{
     await sleep(1800)
     for(let i = 0; i < subText.length; i++){
         h2.innerText = subText.substring(0, i + 1);
-        await sleep(50)
+        await sleep(50);
     }
 }
 writeLower()
+
+const tipText = "Kliknij żeby zobaczyć więcej";
+const more = document.getElementById("more");
+
+const writeTip = async ()=>{
+    await sleep(2400)
+    for(let i = 0; i < tipText.length; i++){
+        more.innerText = tipText.substring(0, i + 1);
+        await sleep(50);
+    }
+}
+
+writeTip();
 
 /* PARALAX EVENTS */
 window.addEventListener('scroll', async ()=>{

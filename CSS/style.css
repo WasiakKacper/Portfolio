@@ -322,7 +322,24 @@ body.active{
     justify-content: center;
     z-index: 10000;
     padding-bottom: 2%;
-    margin: 0 auto;
+}
+
+#more{
+    display: none;
+    font-size: 2em;
+    animation-name: down-up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#more.active{
+    display: inline;
+}
+
+#arrowWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #arrow-down{
