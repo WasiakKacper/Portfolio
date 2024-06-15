@@ -2,9 +2,9 @@ import './Projects.css'
 import PropTypes from 'prop-types';
 
 const sourceArray = [
-    "src/assets/Portfolio.png",
-    "src/assets/weather.png",
-    "src/assets/todolist.png"
+    "/src/assets/Portfolio.png",
+    "/src/assets/weather.png",
+    "/src/assets/todolist.png"
 ];
 
 const linkArray = [
