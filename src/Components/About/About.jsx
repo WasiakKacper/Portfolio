@@ -1,4 +1,4 @@
-import aboutSticker from "src/assets/AboutMeSticker.png";
+import aboutSticker from "/src/assets/AboutMeSticker.png";
 import './About.css';
 
 export default function About(){
