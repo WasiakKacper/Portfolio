@@ -1,0 +1,147 @@
+/* COLORS */
+:root{
+    --light: #FFF6FF;
+    --lightFont: #F1EAFF;
+    --purple: #9A80E9;
+    --darkFont: #3A3546;
+} 
+
+*{
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.projectsPage{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 1%;
+}
+
+.projectsPage h3.projectsHeader{
+    font-size: 3em;
+    font-weight: normal;
+
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 300ms ease;
+}
+
+.projectsPage h3.projectsHeader.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.galery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 1%;
+
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 300ms ease;
+}
+
+.galery.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.project{
+    background-color: var(--lightFont);
+    width: 28%;
+    text-align: left;
+    text-wrap: wrap;
+    border-radius: 20px;   
+    padding: 0.8%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.project h3{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 5%;
+}
+
+.project img{
+    border-radius: 0.5em;
+    width: 98%;
+    height: 58%;
+    margin: 0 auto;
+}
+
+.project p{
+    height: 100%;
+    font-size: 1.7em;
+    margin-bottom: 10%;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.buttons a{
+    text-decoration: none;
+    background-color: var(--purple);
+    color: var(--lightFont);
+    padding: 2% 3%;
+    border-radius: 2em;
+    font-size: 1.2em;
+    transition: 300ms ease;
+}
+
+@media (hover :hover){
+    .buttons a:hover{
+        transform: translateY(-7%);
+    }
+}
+
+/* TABLET */
+@media only screen and (max-width:1200px){
+    /* projects */
+    .galery{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project{
+        width: 75%;
+        padding: 2%;
+        margin: 5% auto;
+    }
+}
+
+/*  PHONE */
+@media only screen and (max-width: 576px){
+    /* projects */
+    .galery{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project{
+        padding: 2%;
+        margin: 5% auto;
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+
+    .buttons a{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+}
