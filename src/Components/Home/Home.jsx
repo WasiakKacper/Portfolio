@@ -1,3 +1,4 @@
+import avatar from "/src/assets/avatar.png"
 import './Home.css'
 
 function Home(){
@@ -68,7 +69,7 @@ window.addEventListener('load', async () => {
             <div className="right">
                 <img 
                     className="avatar"
-                    src="src/assets/avatar.png"
+                    src={avatar}
                     alt="Zdjęcie profilowe Kacper Wasiak" 
                 />
             </div>
