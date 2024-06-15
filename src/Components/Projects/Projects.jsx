@@ -1,10 +1,13 @@
+import portfolioImage from "/src/assets/Portfolio.png";
+import weatherImage from "/src/assets/weather.png";
+import todolistImage from "/src/assets/todolist.png";
 import './Projects.css'
 import PropTypes from 'prop-types';
 
 const sourceArray = [
-    "/src/assets/Portfolio.png",
-    "/src/assets/weather.png",
-    "/src/assets/todolist.png"
+    portfolioImage,
+    weatherImage,
+    todolistImage
 ];
 
 const linkArray = [
