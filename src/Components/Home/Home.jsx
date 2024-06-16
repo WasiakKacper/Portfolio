@@ -1,3 +1,4 @@
+import avatar from "/src/assets/avatar.png"
 import './Home.css'
 
 function Home(){
@@ -47,8 +48,7 @@ window.addEventListener('load', async () => {
 })
 
 //Home page JSX
-    const avatar = "src/assets/avatar.png";
-
+    
     const ghLink = "https://github.com/WasiakKacper/Portfolio";
     const fbLink = "https://www.facebook.com/kacper.wasiak.9216?locale=pl_PL";
     const igLink = "https://www.instagram.com/kacper_wasiak/";
@@ -69,7 +69,7 @@ window.addEventListener('load', async () => {
             <div className="right">
                 <img 
                     className="avatar"
-                    src={avatar} 
+                    src={avatar}
                     alt="Zdjęcie profilowe Kacper Wasiak" 
                 />
             </div>

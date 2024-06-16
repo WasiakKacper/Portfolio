@@ -1,11 +1,10 @@
+
+import portfolioImage from "/src/assets/Portfolio.png";
+import weatherImage from "/src/assets/weather.png";
+import todolistImage from "/src/assets/todolist.png";
 import './Projects.css'
 import PropTypes from 'prop-types';
 
-const sourceArray = [
-    "src/assets/Portfolio.png",
-    "src/assets/weather.png",
-    "src/assets/todolist.png"
-];
 
 const linkArray = [
     "https://kacper-wasiak-portfolio-programisty.netlify.app/",
@@ -78,7 +77,7 @@ export default function Projects(){
             <h3 className="projectsHeader">Projekty</h3>
             <div className="galery">
                 <Card 
-                    source={sourceArray[0]} 
+                    source={portfolioImage} 
                     name={nameArray[0]} 
                     description={descriptionArray[0]} 
                     link={linkArray[0]}
@@ -86,7 +85,7 @@ export default function Projects(){
                 />
 
                 <Card 
-                    source={sourceArray[1]} 
+                    source={weatherImage} 
                     name={nameArray[1]} 
                     description={descriptionArray[1]} 
                     link={linkArray[1]}
@@ -94,7 +93,7 @@ export default function Projects(){
                 />
 
                 <Card 
-                    source={sourceArray[2]} 
+                    source={todolistImage} 
                     name={nameArray[2]} 
                     description={descriptionArray[2]} 
                     link={linkArray[2]}

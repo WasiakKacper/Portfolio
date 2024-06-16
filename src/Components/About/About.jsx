@@ -1,8 +1,8 @@
-import './About.css'
+
+import aboutSticker from "/src/assets/AboutMeSticker.png";
+import './About.css';
 
 export default function About(){
-
-    const imgUrl = "src/assets/AboutMeSticker.png"
 
     window.addEventListener('scroll', () => {
         const aboutPage = document.getElementById('aboutPage').offsetTop;
@@ -34,7 +34,7 @@ export default function About(){
                 <p className='text'>
                     Mam na imię Kacper jestem absolwentem technikum informatycznego. Tworzeniem stron internetowych zajmuję się od drugiej połowy 2022 roku. Poza programowaniem lubię grać na gitarze i uprawiać sport.
                 </p>
-                <img src={imgUrl} alt="Kacper Wasiak" className='image'/>
+                <img src={aboutSticker} alt="Kacper Wasiak" className='image'/>
             </div>
         </div>
     );
