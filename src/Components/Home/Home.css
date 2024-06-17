@@ -149,7 +149,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 5%;
-        margin-top: 1%;
+        gap: 9%;
+        margin-top: 5%;
+    }
+
+    .homePage .left .links .link{
+        width: 45px;
+        height: 45px;
     }
 }
