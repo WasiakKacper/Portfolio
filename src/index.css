@@ -122,7 +122,6 @@ body.active{
         text-align: center;
     
         bottom: 12%;
-        margin: 0 auto;
     }
 
     .navigation p.tip{
@@ -133,18 +132,17 @@ body.active{
 
 @media only screen and (max-width: 576px){
     .navigation{
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         position: fixed;
         z-index: 1000;
         text-align: center;
-    
         bottom: 12%;
-        margin: 0 auto;
     }
 
     .navigation p.tip{
+        width: auto;
         color: var(--darkFont);
         font-size: 2em;
     }

@@ -58,12 +58,14 @@
 }
 
 .aboutPage img{
+    display: none;
     transform: translateX(120px);
     opacity: 0;
     transition: 400ms ease;
 }
 
 .aboutPage img.active{
+    display: inline;
     transform: translateY(0px);
     opacity: 1;
 }
