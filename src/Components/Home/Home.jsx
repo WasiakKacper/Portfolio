@@ -10,8 +10,8 @@ function Home(){
 
 //Show home page
 const loadPage = async () => {
-    const avatar = document.querySelector('.avatar');
-    const buttons = document.querySelector('.links');
+    const avatar = document.querySelectorAll('img.avatar');
+    const buttons = document.querySelectorAll('div.links');
 
     await sleep(500)
     avatar.classList.add('active');
