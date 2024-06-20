@@ -1,4 +1,4 @@
-import avatar from "/src/assets/avatar.png"
+import avatarPicture from "/src/assets/avatar.png"
 import './Home.css'
 
 function Home(){
@@ -9,16 +9,6 @@ function Home(){
     }
 
 //Show home page
-const loadPage = async () => {
-    const avatar = document.querySelector('.avatar');
-    const buttons = document.querySelector('.links');
-
-    await sleep(500)
-    avatar.classList.add('active');
-
-    await sleep(2500)
-    buttons.classList.add('active');
-}
 
 const Write = async () => {
     const name = "Kacper Wasiak";
@@ -42,7 +32,16 @@ const Write = async () => {
 
 //Load Page
 window.addEventListener('load', async () => {
-    loadPage();
+    async function loadPicture(){
+        const avatarImg = document.getElementById('avatarImg');
+        const linksBox = document.getElementById('linksBox');
+
+        await sleep(500)
+        avatarImg.classList.add('active');
+        await sleep(3000);
+        linksBox.classList.add('active')
+    }
+    loadPicture();
     await sleep(600);
     Write();
 })
@@ -60,16 +59,17 @@ window.addEventListener('load', async () => {
                     <h2></h2>
                     <h3></h3>
                 </div>
-                <div className="links">
+                <div id="linksBox" className="links">
                     <a href={fbLink} className="link"><i className="icon-facebook"></i></a>
                     <a href={igLink} className="link"><i className="icon-instagram"></i></a>
                     <a href={ghLink} className="link"><i className="icon-github-circled"></i></a>
                 </div>
             </div>
             <div className="right">
-                <img 
+                <img
+                    id="avatarImg" 
                     className="avatar"
-                    src={avatar}
+                    src={avatarPicture}
                     alt="Zdjęcie profilowe Kacper Wasiak" 
                 />
             </div>
