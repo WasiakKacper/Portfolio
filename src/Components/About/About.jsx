@@ -1,9 +1,15 @@
 import aboutSticker from "/src/assets/AboutMeSticker.png";
 import './About.css';
 
+//sleep
+//Sleep function
+function sleep(ms){
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default function About(){
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', async () => {
         const aboutPage = document.getElementById('aboutPage').offsetTop;
         const body = document.querySelector('body');
         let value = window.scrollY;
@@ -18,8 +24,9 @@ export default function About(){
         const aboutText = document.querySelector('.text');
         const aboutImage = document.querySelector('.image');
         const aboutHeader = document.querySelector('.aboutHeader');
-
+    
         if(value >= aboutPage - 400){
+            await sleep(100);
             aboutText.classList.add('active');
             aboutImage.classList.add('active');
             aboutHeader.classList.add('active');

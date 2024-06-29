@@ -64,7 +64,7 @@ export default function Projects(){
         let value = window.scrollY;
 
         if(value >= projectsPage - 500){
-            await sleep(50)
+            await sleep(100)
             header.classList.add("active");
             galery.classList.add("active");
         }

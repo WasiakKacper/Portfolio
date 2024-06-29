@@ -13,6 +13,7 @@
 }
 
 .aboutPage{
+    overflow: hidden;
     padding-top: 5%;
     text-align: center;
 }
@@ -58,15 +59,13 @@
 }
 
 .aboutPage img{
-    display: none;
     transform: translateX(120px);
     opacity: 0;
     transition: 400ms ease;
 }
 
 .aboutPage img.active{
-    display: inline;
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
 }
 
