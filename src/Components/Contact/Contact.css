@@ -1,0 +1,91 @@
+/* COLORS */
+:root{
+    --light: #FFF6FF;
+    --lightFont: #F1EAFF;
+    --purple: #9A80E9;
+    --darkFont: #3A3546;
+} 
+
+*{
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.contactPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    color: var(--lightFont);
+    margin-bottom: 10%;
+}
+
+.contactPage h3.aboutHeader{
+    font-size: 3em;
+    font-weight: normal;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 300ms ease;
+    margin-bottom: 5%;
+}
+
+.contactPage h3.aboutHeader.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+.contactPage h2.aboutText{
+    max-width: 800px;
+    font-size: 3em;
+    font-weight: normal;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 300ms ease;
+    margin-bottom: 5%;
+}
+
+.contactPage h2.aboutText.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.contactPage h3.underText{
+    font-size: 3em;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 300ms ease;
+    font-weight: normal;
+}
+
+.contactPage h3.underText.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* TABLET */
+@media only screen and (max-width:1200px){
+    /* contact */
+
+    .contactPage{
+        margin-bottom: 30%;
+    }
+
+    .contactPage h3.aboutHeader{
+        font-size: 3em;
+    }
+
+    .contactPage h2.aboutText{
+        text-align: center;
+        margin: 0 auto 10% auto;
+        padding: 0;
+        max-width: 600px;
+        font-size: 2em;
+    }
+
+    .contactPage h3.underText{
+        font-size: 2em;
+    }
+}

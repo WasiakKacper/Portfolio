@@ -1,0 +1,149 @@
+/* COLORS */
+:root{
+    --light: #FFF6FF;
+    --lightFont: #F1EAFF;
+    --purple: #9A80E9;
+    --darkFont: #3A3546;
+} 
+
+html{
+    scrollbar-width: none;
+}
+
+body{
+    background-color: var(--light);
+
+    transition: 300ms ease;
+}
+
+body.active{
+    background-color: var(--purple);
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 2%;
+}
+
+.navigation p.tip{
+    width: auto;
+    color: var(--darkFont);
+    font-size: 2em;
+    text-align: center;
+
+    animation-name: downUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.navigation .arrows{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation .arrows p{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 300ms ease;
+}
+
+.navigation .arrows p.arrowUp{
+    animation-name: upDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    display: none;
+}
+
+.navigation .arrows p.arrowUp:before{
+    content: "\e5d8";
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--darkFont);
+}
+
+.navigation .arrows p.arrowDown{
+    animation-name: downUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.navigation .arrows p.arrowDown:before{
+    content: "\e5db";
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--darkFont);
+}
+
+@media(hover: hover){
+    .navigation .arrows p:hover{
+        background-color: var(--lightFont);
+    }
+}
+
+/*Animation*/
+@keyframes upDown {
+    0%{transform: translateY(0%)}
+    50%{transform: translateY(15%)}
+    100%{transform: translateY(0%)}
+}
+
+@keyframes downUp {
+    0%{transform: translateY(15%)}
+    50%{transform: translateY(0%)}
+    100%{transform: translateY(15%)}
+}
+
+@media only screen and (max-width: 992px){
+    .navigation{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1000;
+        text-align: center;
+    
+        bottom: 12%;
+    }
+
+    .navigation p.tip{
+        color: var(--darkFont);
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .navigation{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1000;
+        text-align: center;
+        bottom: 12%;
+    }
+
+    .navigation p.tip{
+        width: auto;
+        color: var(--darkFont);
+        font-size: 2em;
+    }
+}
