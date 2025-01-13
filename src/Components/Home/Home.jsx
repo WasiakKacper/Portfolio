@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Logo from "/Images/avatar.svg";
-import { motion } from "motion/react";
+import { easeIn, motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
 
 function Home() {
@@ -41,23 +41,32 @@ function Home() {
         <motion.nav
           initial={{ transform: "translateY(200px)", opacity: 0 }}
           animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ type: "linear", duration: 0.5, delay: 5 }}
+          transition={{ type: "spring", bounce: 0.2, delay: 5 }}
         >
-          <a
+          <motion.a
             href="https://www.facebook.com/kacper.wasiak.9216"
             className="icon-facebook"
             target="_blank"
-          ></a>
-          <a
+            initial={{ transform: "translateY(0px)" }}
+            whileHover={{ transform: "translateY(-10px)" }}
+            transition={{ type: "spring", bounce: 0.4 }}
+          ></motion.a>
+          <motion.a
             href="https://www.instagram.com/kacper_wasiak/"
             className="icon-instagram"
             target="_blank"
-          ></a>
-          <a
+            initial={{ transform: "translateY(0px)" }}
+            whileHover={{ transform: "translateY(-10px)" }}
+            transition={{ type: "spring", bounce: 0.4 }}
+          ></motion.a>
+          <motion.a
             href="https://github.com/WasiakKacper"
             className="icon-github-circled"
             target="_blank"
-          ></a>
+            initial={{ transform: "translateY(0px)" }}
+            whileHover={{ transform: "translateY(-10px)" }}
+            transition={{ type: "spring", bounce: 0.4 }}
+          ></motion.a>
         </motion.nav>
       </section>
       <section>
@@ -66,7 +75,7 @@ function Home() {
           alt="Kacper Wasiak Image"
           initial={{ transform: "translateX(-500px)" }}
           animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring", delay: 1 }}
+          transition={{ type: "spring", bounce: 0.3, delay: 1 }}
         />
       </section>
     </main>

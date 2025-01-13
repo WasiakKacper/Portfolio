@@ -72,8 +72,4 @@ a {
   img.unactive:hover {
     scale: 1.07;
   }
-
-  a:hover {
-    transform: translateY(-10%);
-  }
 }
