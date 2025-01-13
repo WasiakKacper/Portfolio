@@ -50,30 +50,12 @@ img {
   transition: 500ms ease;
 }
 
-img.unactive {
-  margin-right: 0%;
-}
-
-img.active {
-  margin-right: 100%;
-}
-
 nav {
   width: 30%;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   transition: 500ms ease;
-}
-
-nav.unactive {
-  transform: translateY(0%);
-  opacity: 100%;
-}
-
-nav.active {
-  transform: translateY(100%);
-  opacity: 0%;
 }
 
 a {

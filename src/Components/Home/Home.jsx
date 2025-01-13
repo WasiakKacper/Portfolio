@@ -1,43 +1,48 @@
-import { useState } from "react";
-import { useTypewriter } from "react-simple-typewriter";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import Logo from "/Images/avatar.svg";
+import { motion } from "motion/react";
+import { Typewriter } from "react-simple-typewriter";
 
 function Home() {
-  const [show, setShow] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-  const [typeEffect] = useTypewriter({
-    words: ["Kacper Wasiak"],
-    typeSpeed: 100,
-  });
-  const waitUntilShow = () => {
-    setTimeout(() => {
-      setShow(true);
-    }, 1000);
-  };
+  const [startTypingUpperText, setStartTypingUpperText] = useState(false);
+  const [startTypingLowerText, setStartTypingLowerText] = useState(false);
 
-  waitUntilShow();
+  useEffect(() => {
+    const timerForUpperText = setTimeout(() => {
+      setStartTypingUpperText(true);
+    }, 1500);
 
-  const waitUntilActive = () => {
-    setTimeout(() => {
-      setIsActive(true);
-    }, 2000);
-  };
-  waitUntilActive();
+    const timerForLowerText = setTimeout(() => {
+      setStartTypingLowerText(true);
+    }, 3000);
+    return () => clearTimeout(timerForUpperText, timerForLowerText);
+  }, []);
 
   return (
     <main>
       <section>
-        {show ? (
-          <header>
-            <h1>{typeEffect}</h1>
-            <h2>Frontend Developer</h2>
-          </header>
-        ) : (
-          ""
-        )}
-
-        <nav className={isActive ? "unactive" : "active"}>
+        <motion.header
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          <h1>
+            {startTypingUpperText && (
+              <Typewriter words={["Kacper Wasiak"]} typeSpeed={100} />
+            )}
+          </h1>
+          <h2>
+            {startTypingLowerText && (
+              <Typewriter words={["Frontend Developer"]} typeSpeed={100} />
+            )}
+          </h2>
+        </motion.header>
+        <motion.nav
+          initial={{ transform: "translateY(200px)", opacity: 0 }}
+          animate={{ transform: "translateY(0px)", opacity: 1 }}
+          transition={{ type: "linear", duration: 0.5, delay: 5 }}
+        >
           <a
             href="https://www.facebook.com/kacper.wasiak.9216"
             className="icon-facebook"
@@ -53,13 +58,15 @@ function Home() {
             className="icon-github-circled"
             target="_blank"
           ></a>
-        </nav>
+        </motion.nav>
       </section>
       <section>
-        <img
+        <motion.img
           src={Logo}
           alt="Kacper Wasiak Image"
-          className={show ? "unactive" : "active"}
+          initial={{ transform: "translateX(-500px)" }}
+          animate={{ transform: "translateX(0px)" }}
+          transition={{ type: "spring", delay: 1 }}
         />
       </section>
     </main>
