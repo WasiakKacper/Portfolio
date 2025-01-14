@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Logo from "/Images/avatar.svg";
-import { easeIn, motion } from "motion/react";
+import { motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
+import PropTypes from "prop-types";
 
 function Home() {
   const [startTypingUpperText, setStartTypingUpperText] = useState(false);
@@ -19,8 +20,26 @@ function Home() {
     return () => clearTimeout(timerForUpperText, timerForLowerText);
   }, []);
 
+  const LinkToSocial = (props) => {
+    return (
+      <motion.a
+        href={props.url}
+        className={props.class}
+        target="_blank"
+        initial={{ transform: "translateY(0px)" }}
+        whileHover={{ transform: "translateY(-10px)" }}
+        transition={{ type: "spring", bounce: 0.4 }}
+      ></motion.a>
+    );
+  };
+
+  LinkToSocial.propTypes = {
+    url: PropTypes.string,
+    class: PropTypes.string,
+  };
+
   return (
-    <main>
+    <main id="home">
       <section>
         <motion.header
           initial={{ opacity: 0 }}
@@ -43,30 +62,18 @@ function Home() {
           animate={{ transform: "translateY(0px)", opacity: 1 }}
           transition={{ type: "spring", bounce: 0.2, delay: 5 }}
         >
-          <motion.a
-            href="https://www.facebook.com/kacper.wasiak.9216"
-            className="icon-facebook"
-            target="_blank"
-            initial={{ transform: "translateY(0px)" }}
-            whileHover={{ transform: "translateY(-10px)" }}
-            transition={{ type: "spring", bounce: 0.4 }}
-          ></motion.a>
-          <motion.a
-            href="https://www.instagram.com/kacper_wasiak/"
-            className="icon-instagram"
-            target="_blank"
-            initial={{ transform: "translateY(0px)" }}
-            whileHover={{ transform: "translateY(-10px)" }}
-            transition={{ type: "spring", bounce: 0.4 }}
-          ></motion.a>
-          <motion.a
-            href="https://github.com/WasiakKacper"
-            className="icon-github-circled"
-            target="_blank"
-            initial={{ transform: "translateY(0px)" }}
-            whileHover={{ transform: "translateY(-10px)" }}
-            transition={{ type: "spring", bounce: 0.4 }}
-          ></motion.a>
+          <LinkToSocial
+            url="https://www.facebook.com/kacper.wasiak.9216?locale=pl_PL"
+            class="icon-facebook"
+          />
+          <LinkToSocial
+            url="https://www.instagram.com/kacper_wasiak"
+            class="icon-instagram"
+          />
+          <LinkToSocial
+            url="https://github.com/WasiakKacper"
+            class="icon-github-circled"
+          />
         </motion.nav>
       </section>
       <section>
