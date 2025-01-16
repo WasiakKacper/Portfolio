@@ -21,7 +21,7 @@ main#home {
   justify-content: center;
 }
 
-section {
+main#home section {
   width: 50%;
   height: 100vh;
   display: flex;
@@ -30,26 +30,26 @@ section {
   justify-content: center;
 }
 
-header {
+main#home header {
   text-align: center;
   margin-bottom: 2%;
 }
 
-h1 {
+main#home h1 {
   font-size: 3em;
   font-weight: 500;
 }
-h2 {
+main#home h2 {
   font-size: 2em;
   font-weight: 400;
 }
 
-img {
+main#home img {
   width: 45%;
   transition: 500ms ease;
 }
 
-nav {
+main#home nav {
   width: 30%;
   display: flex;
   justify-content: space-around;
@@ -57,7 +57,7 @@ nav {
   transition: 500ms ease;
 }
 
-a {
+main#home a {
   background-color: var(--violet);
   border-radius: 100%;
   padding: 1% 1.5%;
@@ -65,20 +65,4 @@ a {
   color: var(--darkerWhite);
   font-size: 2em;
   transition: 300ms ease;
-}
-
-.icon-down {
-  position: absolute;
-  z-index: 1000;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, 5%);
-  font-size: 1.5em;
-  font-weight: 400;
-}
-
-@media (hover: hover) {
-  img.unactive:hover {
-    scale: 1.07;
-  }
 }
