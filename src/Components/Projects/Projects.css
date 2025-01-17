@@ -49,11 +49,12 @@ main#projects p {
 }
 
 main#projects a {
+  display: inline-block;
   background-color: #9a80e9;
   color: var(--darkerWhite);
   padding: 2%;
   margin-right: 2%;
   border-radius: 2em;
   cursor: pointer;
-  transition: 300 ease;
+  text-decoration: none;
 }

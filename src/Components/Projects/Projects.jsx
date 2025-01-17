@@ -14,6 +14,9 @@ const urlArr = [
   "./Images/Portfolio.png",
   "./Images/weather.png",
   "./Images/todolist.png",
+  "#",
+  "#",
+  "#",
 ];
 
 const Projects = () => {
@@ -23,7 +26,7 @@ const Projects = () => {
         className="project"
         initial={{ transform: "translateY(500px)", opacity: 0 }}
         whileInView={{ transform: "translateY(0px)", opacity: 1 }}
-        transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+        transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: 0.1 }}
       >
         <img src={props.src} alt="" />
         <div className="wrapper">
@@ -31,16 +34,19 @@ const Projects = () => {
           <p>{props.description}</p>
           <nav>
             <motion.a
-              initial={{ transform: "translateY(0px)" }}
-              whileHover={{ transform: "translateY(-20px)" }}
-              transition={{ type: "spring", bounce: 0.4 }}
+              href={props.url}
+              target="_blank"
+              whileHover={{ transform: "translateY(-5px)" }}
+              transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
             >
               Zobacz stronę
             </motion.a>
+
             <motion.a
-              initial={{ transform: "translateY(0px)" }}
-              whileHover={{ transform: "translateY(-10px)" }}
-              transition={{ type: "spring", bounce: 0.4 }}
+              href={props.url}
+              target="_blank"
+              whileHover={{ transform: "translateY(-5px)" }}
+              transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
             >
               Zobacz kod
             </motion.a>
@@ -54,6 +60,7 @@ const Projects = () => {
     src: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
+    url: PropTypes.string,
   };
 
   return (
@@ -70,16 +77,19 @@ const Projects = () => {
           src={urlArr[0]}
           name="Portfolio"
           description={descriptionArr[0]}
+          url={urlArr[3]}
         />
         <ProjectCard
           src={urlArr[1]}
           name="Weather"
           description={descriptionArr[1]}
+          url={urlArr[4]}
         />
         <ProjectCard
           src={urlArr[2]}
           name="ToDoList"
           description={descriptionArr[2]}
+          url={urlArr[5]}
         />
       </section>
     </main>
