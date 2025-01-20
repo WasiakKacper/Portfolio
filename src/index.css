@@ -1,6 +1,13 @@
+:root {
+  --white: #fff6ff;
+  --darkerWhite: #f1eaff;
+  --violet: #9a80e9;
+  --dark: #3a3546;
+}
+
 body {
-  --sb-track-color: #f1eaff;
-  --sb-thumb-color: #9a80e9;
+  --sb-track-color: transparent;
+  --sb-thumb-color: #c2c2c2;
   --sb-size: 15px;
 }
 
