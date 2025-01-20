@@ -1,7 +1,9 @@
+//Imports
 import "./Projects.css";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+//Content
 const descriptionArr = [
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi suscipit quod cupiditate vitae amet, quam quaerat enim. Officiis culpa voluptatem adipisci maiores libero quos, tempore, ea amet corporis, vitae veniam.",
 
@@ -19,7 +21,9 @@ const urlArr = [
   "#",
 ];
 
+//Component
 const Projects = () => {
+  //Nest component
   const ProjectCard = (props) => {
     return (
       <motion.article
@@ -56,6 +60,7 @@ const Projects = () => {
     );
   };
 
+  //Proptypes
   ProjectCard.propTypes = {
     src: PropTypes.string,
     name: PropTypes.string,
@@ -63,6 +68,7 @@ const Projects = () => {
     url: PropTypes.string,
   };
 
+  //Component structure
   return (
     <main id="projects">
       <motion.h1

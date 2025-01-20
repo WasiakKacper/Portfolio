@@ -28,7 +28,7 @@ function Home() {
         target="_blank"
         initial={{ transform: "translateY(0px)" }}
         whileHover={{ transform: "translateY(-10px)" }}
-        transition={{ type: "spring", bounce: 0.4 }}
+        transition={{ type: "spring", bounce: 0.4, duration: 0.3 }}
       ></motion.a>
     );
   };
