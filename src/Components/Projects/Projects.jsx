@@ -31,6 +31,7 @@ const Projects = () => {
         initial={{ transform: "translateY(500px)", opacity: 0 }}
         whileInView={{ transform: "translateY(0px)", opacity: 1 }}
         transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: 0.1 }}
+        viewport={{ once: true }}
       >
         <img src={props.src} alt="" />
         <div className="wrapper">
@@ -75,6 +76,7 @@ const Projects = () => {
         initial={{ transform: "translateY(500px)", opacity: 0 }}
         whileInView={{ transform: "translateY(0px)", opacity: 1 }}
         transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+        viewport={{ once: true }}
       >
         Projekty
       </motion.h1>
