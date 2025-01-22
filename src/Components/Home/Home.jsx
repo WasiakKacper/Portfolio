@@ -4,6 +4,7 @@ import Logo from "/Images/avatar.svg";
 import { motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
 import PropTypes from "prop-types";
+import links from "./Data/Home.js";
 
 function Home() {
   const [startTypingUpperText, setStartTypingUpperText] = useState(false);
@@ -62,25 +63,16 @@ function Home() {
           animate={{ transform: "translateY(0px)", opacity: 1 }}
           transition={{ type: "spring", bounce: 0.2, delay: 5 }}
         >
-          <LinkToSocial
-            url="https://www.facebook.com/kacper.wasiak.9216?locale=pl_PL"
-            class="icon-facebook"
-          />
-          <LinkToSocial
-            url="https://www.instagram.com/kacper_wasiak"
-            class="icon-instagram"
-          />
-          <LinkToSocial
-            url="https://github.com/WasiakKacper"
-            class="icon-github-circled"
-          />
+          <LinkToSocial url={links[0].url} class="icon-facebook" />
+          <LinkToSocial url={links[1].url} class="icon-instagram" />
+          <LinkToSocial url={links[2].url} class="icon-github-circled" />
         </motion.nav>
       </section>
       <section>
         <motion.img
           src={Logo}
           alt="Kacper Wasiak Image"
-          initial={{ transform: "translateX(-500px)" }}
+          initial={{ transform: "translateX(-500px)", scale: 1 }}
           animate={{ transform: "translateX(0px)" }}
           transition={{ type: "spring", bounce: 0.3, delay: 1 }}
         />

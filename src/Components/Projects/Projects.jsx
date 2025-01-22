@@ -2,24 +2,7 @@
 import "./Projects.css";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
-
-//Content
-const descriptionArr = [
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi suscipit quod cupiditate vitae amet, quam quaerat enim. Officiis culpa voluptatem adipisci maiores libero quos, tempore, ea amet corporis, vitae veniam.",
-
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi suscipit quod cupiditate vitae amet, quam quaerat enim. Officiis culpa voluptatem adipisci maiores libero quos, tempore, ea amet corporis, vitae veniam.",
-
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi suscipit quod cupiditate vitae amet, quam quaerat enim. Officiis culpa voluptatem adipisci maiores libero quos, tempore, ea amet corporis, vitae veniam.",
-];
-
-const urlArr = [
-  "./Images/Portfolio.png",
-  "./Images/weather.png",
-  "./Images/todolist.png",
-  "#",
-  "#",
-  "#",
-];
+import projectsInfo from "./Data/Projects.js";
 
 //Component
 const Projects = () => {
@@ -39,7 +22,7 @@ const Projects = () => {
           <p>{props.description}</p>
           <nav>
             <motion.a
-              href={props.url}
+              href={props.site}
               target="_blank"
               whileHover={{ transform: "translateY(-5px)" }}
               transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
@@ -48,7 +31,7 @@ const Projects = () => {
             </motion.a>
 
             <motion.a
-              href={props.url}
+              href={props.code}
               target="_blank"
               whileHover={{ transform: "translateY(-5px)" }}
               transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
@@ -66,7 +49,8 @@ const Projects = () => {
     src: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
-    url: PropTypes.string,
+    site: PropTypes.string,
+    code: PropTypes.string,
   };
 
   //Component structure
@@ -81,24 +65,16 @@ const Projects = () => {
         Projekty
       </motion.h1>
       <section>
-        <ProjectCard
-          src={urlArr[0]}
-          name="Portfolio"
-          description={descriptionArr[0]}
-          url={urlArr[3]}
-        />
-        <ProjectCard
-          src={urlArr[1]}
-          name="Weather"
-          description={descriptionArr[1]}
-          url={urlArr[4]}
-        />
-        <ProjectCard
-          src={urlArr[2]}
-          name="ToDoList"
-          description={descriptionArr[2]}
-          url={urlArr[5]}
-        />
+        {projectsInfo.map((projectsInfo, index) => (
+          <ProjectCard
+            key={index}
+            src={projectsInfo.image}
+            name={projectsInfo.name}
+            description={projectsInfo.description}
+            site={projectsInfo.urlToSite}
+            code={projectsInfo.urlToCode}
+          />
+        ))}
       </section>
     </main>
   );

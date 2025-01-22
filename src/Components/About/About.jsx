@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 //Component
 const About = () => {
   return (
-    <main id="about">
+    <motion.main id="about">
       <motion.h1
         initial={{ transform: "translateY(500px)", opacity: 0 }}
         whileInView={{ transform: "translateY(0px)", opacity: 1 }}
@@ -36,7 +36,7 @@ const About = () => {
           viewport={{ once: true }}
         />
       </section>
-    </main>
+    </motion.main>
   );
 };
 
