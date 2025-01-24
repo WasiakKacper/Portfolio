@@ -31,13 +31,15 @@ main#projects h1 {
 main#projects section {
   display: flex;
   justify-content: space-around;
+  z-index: 0;
 }
 
-main#projects .project {
+main#projects article.project {
   padding: 1%;
   background-color: var(--darkerWhite);
   margin: 3%;
   border-radius: 1em;
+  z-index: 0;
 }
 
 main#projects .wrapper {
