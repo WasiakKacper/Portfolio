@@ -40,44 +40,47 @@ function Home() {
   };
 
   return (
-    <main id="home">
-      <section>
-        <motion.header
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <h1>
-            {startTypingUpperText && (
-              <Typewriter words={["Kacper Wasiak"]} typeSpeed={100} />
-            )}
-          </h1>
-          <h2>
-            {startTypingLowerText && (
-              <Typewriter words={["Frontend Developer"]} typeSpeed={100} />
-            )}
-          </h2>
-        </motion.header>
-        <motion.nav
-          initial={{ transform: "translateY(200px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ type: "spring", bounce: 0.2, delay: 5 }}
-        >
-          <LinkToSocial url={links[0].url} class="icon-facebook" />
-          <LinkToSocial url={links[1].url} class="icon-instagram" />
-          <LinkToSocial url={links[2].url} class="icon-github-circled" />
-        </motion.nav>
-      </section>
-      <section>
-        <motion.img
-          src={Logo}
-          alt="Kacper Wasiak Image"
-          initial={{ transform: "translateX(-500px)", scale: 1 }}
-          animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring", bounce: 0.3, delay: 1 }}
-        />
-      </section>
-    </main>
+    <>
+      <main id="home">
+        <section>
+          <motion.header
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <h1>
+              {startTypingUpperText && (
+                <Typewriter words={["Kacper Wasiak"]} typeSpeed={100} />
+              )}
+            </h1>
+            <h2>
+              {startTypingLowerText && (
+                <Typewriter words={["Frontend Developer"]} typeSpeed={100} />
+              )}
+            </h2>
+          </motion.header>
+          <motion.nav
+            initial={{ transform: "translateY(200px)", opacity: 0 }}
+            animate={{ transform: "translateY(0px)", opacity: 1 }}
+            transition={{ type: "spring", bounce: 0.2, delay: 5 }}
+          >
+            <LinkToSocial url={links[0].url} class="icon-facebook" />
+            <LinkToSocial url={links[1].url} class="icon-instagram" />
+            <LinkToSocial url={links[2].url} class="icon-github-circled" />
+          </motion.nav>
+        </section>
+        <section>
+          <motion.img
+            src={Logo}
+            alt="Kacper Wasiak Image"
+            initial={{ transform: "translateX(-500px)", scale: 1 }}
+            animate={{ transform: "translateX(0px)" }}
+            transition={{ type: "spring", bounce: 0.3, delay: 1 }}
+          />
+        </section>
+      </main>
+      <p className="icon-down"></p>
+    </>
   );
 }
 

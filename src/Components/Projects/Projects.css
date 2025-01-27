@@ -31,7 +31,6 @@ main#projects h1 {
 main#projects section {
   display: flex;
   justify-content: space-around;
-  z-index: 0;
 }
 
 main#projects article.project {
@@ -39,7 +38,6 @@ main#projects article.project {
   background-color: var(--darkerWhite);
   margin: 3%;
   border-radius: 1em;
-  z-index: 0;
 }
 
 main#projects .wrapper {
