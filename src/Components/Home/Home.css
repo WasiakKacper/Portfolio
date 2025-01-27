@@ -60,7 +60,7 @@ main#home nav {
 main#home a {
   background-color: var(--violet);
   border-radius: 100%;
-  padding: 1% 1.5%;
+  padding: 2.4% 1.5%;
   text-decoration: none;
   color: var(--darkerWhite);
   font-size: 2em;
