@@ -2,9 +2,25 @@
 import Image from "/Images/AboutMeSticker.svg";
 import "./About.css";
 import { motion } from "motion/react";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 //Component
 const About = () => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > aboutRef.current.getBoundingClientRect().y + 100) {
+        document.body.style.backgroundColor = "#9a80e9";
+        document.body.style.transition = "300ms ease";
+      } else {
+        document.body.style.backgroundColor = "#fff";
+        document.body.style.transition = "300ms ease";
+      }
+    });
+  }, []);
+
   return (
     <motion.main id="about">
       <motion.h1
@@ -15,7 +31,7 @@ const About = () => {
       >
         O mnie
       </motion.h1>
-      <section>
+      <section ref={aboutRef}>
         <motion.p
           initial={{ transform: "translateX(-500px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}

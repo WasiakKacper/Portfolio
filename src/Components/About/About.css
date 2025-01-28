@@ -23,6 +23,7 @@ main#about {
 main#about h1 {
   font-size: 3em;
   text-align: center;
+  color: var(--darkerWhite);
 }
 
 main#about section {
@@ -39,6 +40,7 @@ main#about p {
   text-align: left;
   padding-left: 10%;
   font-size: 2.5em;
+  color: var(--darkerWhite);
 }
 
 main#about img {
