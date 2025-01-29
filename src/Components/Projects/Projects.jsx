@@ -9,13 +9,7 @@ const Projects = () => {
   //Nest component
   const ProjectCard = (props) => {
     return (
-      <motion.article
-        className="project"
-        initial={{ transform: "translateY(500px)", opacity: 0 }}
-        whileInView={{ transform: "translateY(0px)", opacity: 1 }}
-        transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: 0.1 }}
-        viewport={{ once: true }}
-      >
+      <article className="project">
         <img src={props.src} alt="" />
         <div className="wrapper">
           <h3>{props.name}</h3>
@@ -40,7 +34,7 @@ const Projects = () => {
             </motion.a>
           </nav>
         </div>
-      </motion.article>
+      </article>
     );
   };
 
@@ -64,7 +58,12 @@ const Projects = () => {
       >
         Projekty
       </motion.h1>
-      <section>
+      <motion.section
+        initial={{ transform: "translateY(500px)", opacity: 0 }}
+        whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+        transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         {projectsInfo.map((projectsInfo, index) => (
           <ProjectCard
             key={index}
@@ -75,7 +74,7 @@ const Projects = () => {
             code={projectsInfo.urlToCode}
           />
         ))}
-      </section>
+      </motion.section>
     </main>
   );
 };
