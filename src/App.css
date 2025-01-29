@@ -1,7 +1,60 @@
-#nav p#down {
-  animation: down-up 1.5s ease infinite;
+:root {
+  --white: #fff6ff;
+  --darkerWhite: #f1eaff;
+  --violet: #9a80e9;
+  --dark: #3a3546;
+}
+
+div.arrows {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+}
+
+div.arrows span {
+  animation: down-up 1s ease infinite;
+  margin-bottom: 5%;
+  font-size: 1.5em;
+}
+
+div.arrows span.active {
+  display: none;
+}
+
+div.arrows p {
+  animation: down-up 1s ease infinite;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-size: 2em;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+div.arrows p.icon-up {
+  display: none;
+}
+
+div.arrows p.icon-up.active {
   display: block;
-  z-index: 1000;
+}
+
+div.arrows p.icon-down {
+  display: block;
+}
+
+div.arrows p.icon-down.active {
+  display: none;
+}
+
+section {
+  width: auto;
+  height: auto;
 }
 
 @keyframes down-up {
@@ -9,9 +62,19 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media (hover: hover) {
+  div.arrows p.icon-up.active:hover {
+    background-color: var(--darkerWhite);
+  }
+
+  div.arrows p.icon-down:hover {
+    background-color: var(--darkerWhite);
   }
 }

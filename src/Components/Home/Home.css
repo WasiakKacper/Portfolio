@@ -66,22 +66,3 @@ main#home a {
   font-size: 2em;
   transition: 300ms ease;
 }
-
-p.icon-down {
-  text-align: center;
-  font-size: 2em;
-  animation: down-up 1s ease infinite;
-  display: block;
-}
-
-@keyframes down-up {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}

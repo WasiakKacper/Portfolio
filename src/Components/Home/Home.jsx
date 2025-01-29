@@ -79,7 +79,6 @@ function Home() {
           />
         </section>
       </main>
-      <p className="icon-down"></p>
     </>
   );
 }
