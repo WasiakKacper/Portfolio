@@ -5,32 +5,7 @@ import "./App.css";
 import { useRef, useEffect, useState } from "react";
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setIsActive(true);
-    });
-  }, []);
-
-  const NavArrows = () => {
-    return (
-      <div className="arrows">
-        <span className={isActive ? "active" : ""}>
-          Kliknij żeby zobaczyć więcej
-        </span>
-        <p
-          className={`icon-up ${upArrow ? "active" : ""}`}
-          onClick={handleUpArrowClick}
-        ></p>
-        <p
-          className={`icon-down${downArrow ? "active" : ""}`}
-          onClick={handleDownArrowClick}
-        ></p>
-      </div>
-    );
-  };
-
+  //Navigation functions
   const handleUpArrowClick = () => {
     let scrollY = window.scrollY;
     const projectBottom = projectRef.current.getBoundingClientRect().bottom;
@@ -60,18 +35,21 @@ function App() {
   const projectRef = useRef(null);
   const aboutRef = useRef(null);
 
+  const [isActive, setIsActive] = useState(false);
   const [upArrow, setUpArrow] = useState(false);
   const [downArrow, setDownArrow] = useState(false);
 
   useEffect(() => {
-    //Show arrows
+    //Show upArrow and text
     document.addEventListener("scroll", () => {
       if (window.scrollY > 5) {
         setUpArrow(true);
+        setIsActive(true);
       } else {
         setUpArrow(false);
       }
 
+      //Show downArrow
       if (
         window.scrollY >=
         aboutRef.current.getBoundingClientRect().bottom + 30
@@ -85,7 +63,19 @@ function App() {
 
   return (
     <>
-      <NavArrows />
+      <div className="arrows">
+        <span className={isActive ? "active" : ""}>
+          Kliknij żeby zobaczyć więcej
+        </span>
+        <p
+          className={`icon-up ${upArrow ? "active" : ""}`}
+          onClick={handleUpArrowClick}
+        ></p>
+        <p
+          className={`icon-down${downArrow ? "active" : ""}`}
+          onClick={handleDownArrowClick}
+        ></p>
+      </div>
       <section ref={homeRef}>
         <Home />
       </section>

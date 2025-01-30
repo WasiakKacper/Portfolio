@@ -4,49 +4,49 @@ import { motion } from "motion/react";
 import PropTypes from "prop-types";
 import projectsInfo from "./Data/Projects.js";
 
+//Nest component
+const ProjectCard = (props) => {
+  return (
+    <article className="project">
+      <img src={props.src} alt="" />
+      <div className="wrapper">
+        <h3>{props.name}</h3>
+        <p>{props.description}</p>
+        <nav>
+          <motion.a
+            href={props.site}
+            target="_blank"
+            whileHover={{ transform: "translateY(-5px)" }}
+            transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
+          >
+            Zobacz stronę
+          </motion.a>
+
+          <motion.a
+            href={props.code}
+            target="_blank"
+            whileHover={{ transform: "translateY(-5px)" }}
+            transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
+          >
+            Zobacz kod
+          </motion.a>
+        </nav>
+      </div>
+    </article>
+  );
+};
+
+//Proptypes
+ProjectCard.propTypes = {
+  src: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  site: PropTypes.string,
+  code: PropTypes.string,
+};
+
 //Component
 const Projects = () => {
-  //Nest component
-  const ProjectCard = (props) => {
-    return (
-      <article className="project">
-        <img src={props.src} alt="" />
-        <div className="wrapper">
-          <h3>{props.name}</h3>
-          <p>{props.description}</p>
-          <nav>
-            <motion.a
-              href={props.site}
-              target="_blank"
-              whileHover={{ transform: "translateY(-5px)" }}
-              transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
-            >
-              Zobacz stronę
-            </motion.a>
-
-            <motion.a
-              href={props.code}
-              target="_blank"
-              whileHover={{ transform: "translateY(-5px)" }}
-              transition={{ type: "spring", duration: 0.3, bounce: 0.6 }}
-            >
-              Zobacz kod
-            </motion.a>
-          </nav>
-        </div>
-      </article>
-    );
-  };
-
-  //Proptypes
-  ProjectCard.propTypes = {
-    src: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    site: PropTypes.string,
-    code: PropTypes.string,
-  };
-
   //Component structure
   return (
     <main id="projects">

@@ -7,6 +7,7 @@
 
 div.arrows {
   position: fixed;
+  z-index: 10000;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -42,10 +43,12 @@ div.arrows p.icon-up {
 
 div.arrows p.icon-up.active {
   display: block;
+  z-index: 2;
 }
 
 div.arrows p.icon-down {
   display: block;
+  z-index: 2;
 }
 
 div.arrows p.icon-down.active {
