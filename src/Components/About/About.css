@@ -18,6 +18,7 @@ main#about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 5%;
 }
 
 main#about h1 {

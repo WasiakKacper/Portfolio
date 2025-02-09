@@ -1,6 +1,8 @@
+import "./Contact.css";
+
 function Contact() {
   return (
-    <>
+    <main id="contact">
       <form action="">
         <div>
           <input type="text" />
@@ -9,7 +11,7 @@ function Contact() {
         <textarea name="" id=""></textarea>
         <button type="submit">Submit</button>
       </form>
-    </>
+    </main>
   );
 }
 
