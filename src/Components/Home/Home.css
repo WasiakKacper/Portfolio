@@ -23,21 +23,22 @@ main#home {
 }
 
 main#home h1 {
+  width: 70%;
+  text-align: center;
   background-color: var(--dark);
-  padding: 1% 10%;
   color: var(--white);
   font: bold 7em "Jost";
-  letter-spacing: 15px;
+  letter-spacing: 10px;
 }
 
 main#home h3 {
   margin-top: 1%;
   color: var(--dark);
-  font: 4em "Joan";
+  font: 3.5em "Joan";
 }
 
 main#home section#wrapper {
-  width: 70%;
+  width: 75%;
   margin-top: 7%;
   display: flex;
   justify-content: space-evenly;
