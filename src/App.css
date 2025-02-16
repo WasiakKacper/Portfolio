@@ -1,3 +1,9 @@
+:root {
+  --white: #e5e7f4;
+  --violet: #99a2e4;
+  --dark: #080a19;
+}
+
 section.loaderWrapper.active {
   width: 100%;
   height: 100vh;
@@ -13,6 +19,33 @@ section.loaderWrapper.unactive {
   display: none;
 }
 
+/* Navbar */
+nav {
+  width: 80%;
+  background-color: var(--dark);
+  padding: 0.8%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 2em 2em 0 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  font: 1.5em "Joan";
+  letter-spacing: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/* Loader */
 .loader {
   width: 60px;
   aspect-ratio: 4;
@@ -30,5 +63,11 @@ section.loaderWrapper.unactive {
   }
   66% {
     background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    font-weight: 600;
   }
 }

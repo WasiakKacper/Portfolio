@@ -15,6 +15,22 @@ function App() {
       <section className={`loaderWrapper ${!isLoaded ? "active" : "unactive"}`}>
         <div className="loader"></div>
       </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Projekty</a>
+          </li>
+          <li>
+            <a href="#">O mnie</a>
+          </li>
+          <li>
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
       <Home />
     </>
   );
