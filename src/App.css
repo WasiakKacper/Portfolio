@@ -19,32 +19,6 @@ section.loaderWrapper.unactive {
   display: none;
 }
 
-/* Navbar */
-nav {
-  width: 80%;
-  background-color: var(--dark);
-  padding: 0.8%;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border-radius: 2em 2em 0 0;
-}
-
-ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 2%;
-  font: 1.5em "Joan";
-  letter-spacing: 4px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--white);
-}
-
 /* Loader */
 .loader {
   width: 60px;
