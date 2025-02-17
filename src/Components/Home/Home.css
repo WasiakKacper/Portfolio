@@ -23,18 +23,18 @@ main#home {
 }
 
 main#home h1 {
-  width: 70%;
+  width: 55%;
   text-align: center;
   background-color: var(--dark);
   color: var(--white);
-  font: bold 7em "Jost";
+  font: bold 6.5em "Jost";
   letter-spacing: 10px;
 }
 
 main#home h3 {
   margin-top: 1%;
   color: var(--dark);
-  font: 3.5em "Joan";
+  font: 3em "Joan";
 }
 
 main#home section#wrapper {
