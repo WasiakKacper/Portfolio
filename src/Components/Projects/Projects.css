@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joan&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: #e5e7f4;
+  --violet: #99a2e4;
+  --dark: #080a19;
+}
+
+main#projects {
+  width: 100%;
+}
+
+main#projects h1 {
+  text-align: center;
+  font: 600 6.5em "Jost";
+}
+
+main#projects section#galery {
+  padding: 2%;
+}
+main#projects section#galery div.row img {
+  width: 100%;
+  z-index: 0;
+  border: 1px solid var(--dark);
+  border-radius: 1em;
+  transition: 400ms ease;
+}
+
+main#projects section#galery div#oneInRow {
+  text-align: center;
+}
+
+main#projects section#galery div#oneInRow img {
+  width: 80%;
+}
+
+main#projects section#galery div#twoInRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#projects section#galery div#twoInRow img {
+  width: 39%;
+  margin: 1%;
+}
+
+@media (hover: hover) {
+  main#projects section#galery div.row img:hover {
+    filter: blur(0.5px) brightness(0.2);
+  }
+}
