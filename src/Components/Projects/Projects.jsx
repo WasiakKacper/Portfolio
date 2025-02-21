@@ -1,25 +1,36 @@
 import "./Projects.css";
+import PropTypes from "prop-types";
 
-const Row = (props)=>{
-  return(
-    
-  )
-}
+const Card = (props) => {
+  return (
+    <div className="cardWrapper">
+      <img src={props.imageUrl} alt={props.descriptionContent} />
+      <div>
+        <p className="desc">{props.descriptionContent}</p>
+        <div className="btnWrapper">
+          <a href="#" className="btn">
+            Zobacz stronę
+          </a>
+          <a href="#" className="btn">
+            Zobacz kod
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+Card.propTypes = {
+  imageUrl: PropTypes.string,
+  descriptionContent: PropTypes.string,
+};
 
 function Projects() {
   return (
     <>
       <main id="projects">
         <h1>PROJEKTY</h1>
-        <section id="galery">
-          <div id="oneInRow" className="row">
-            <img src="/Images/Portfolio.png" alt="" />
-          </div>
-          <div id="twoInRow" className="row">
-            <img src="/Images/weather.png" alt="" />
-            <img src="/Images/todolist.png" alt="" />
-          </div>
-        </section>
+        <section id="galery"></section>
       </main>
     </>
   );

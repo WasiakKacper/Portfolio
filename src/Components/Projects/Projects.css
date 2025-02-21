@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joan&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 :root {
   --white: #e5e7f4;
   --violet: #99a2e4;
   --dark: #080a19;
+}
+
+* {
+  box-sizing: border-box;
+  font: 10px var(--dark);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
 }
 
 main#projects {
@@ -26,7 +28,6 @@ main#projects section#galery {
 }
 main#projects section#galery div.row img {
   width: 100%;
-  z-index: 0;
   border: 1px solid var(--dark);
   border-radius: 1em;
   transition: 400ms ease;
