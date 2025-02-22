@@ -1,40 +1,43 @@
-import "./Home.css";
-import Styles from "./Styles.js";
+import Styles from "../../Styles.js";
 
 function Home() {
   return (
     <main
       id="home"
-      className="w-full h-full flex flex-col items-center justify-center"
+      className="w-full  flex flex-col items-center justify-center my-10 md:my-50 z-1"
     >
       {/* HEADING */}
-      <h1 className="w-120 md:w-200 bg-(--dark) text-5xl md:text-9xl font-[Jost] text-(--white) text-center tracking-[4px] block">
+      <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px]">
         KACPER WASIAK
       </h1>
-      <h3 className="text-center text-[90px]">Frontend developer</h3>
+      <h3 className="text-4xl my-5 font-[Jost]">Frontend developer</h3>
 
       {/* TECH STACK */}
       <section
         id="wrapper"
-        className="flex flex-col md:flex-row w-full items-center justify-center"
+        className="flex flex-col md:flex-row w-full items-center justify-center gap-10"
       >
         {/* LEFT */}
-        <div className="left">
+        <div className={`${Styles.techStackBolockWrapper} justify-end`}>
           {/* HTML */}
-          <div className={`${Styles.techStackBlock} after:content-['HTML']`}>
+          <div
+            className={`${Styles.techStackBlock} after:content-['HTML'] hover:*:brightness-50`}
+          >
             <img src="/Images/HTML_IMAGE.svg" alt="Tech stack: HTML" />
           </div>
           {/* CSS */}
-          <div className={`${Styles.techStackBlock} after:content-['CSS']`}>
+          <div
+            className={`${Styles.techStackBlock} after:content-['CSS'] hover:*:brightness-50`}
+          >
             <img src="/Images/CSS_IMAGE.svg" alt="Tech stack: CSS" />
           </div>
         </div>
 
         {/* RIGHT */}
-        <div className="right">
+        <div className={`${Styles.techStackBolockWrapper} justify-start`}>
           {/* JAVASCRIPT */}
           <div
-            className={`${Styles.techStackBlock} after:content-['JavaScript']`}
+            className={`${Styles.techStackBlock} after:content-['JavaScript'] hover:*:brightness-50`}
           >
             <img
               src="/Images/JavaScript_IMAGE.svg"
@@ -42,7 +45,9 @@ function Home() {
             />
           </div>
           {/* REACT */}
-          <div className={`${Styles.techStackBlock} after:content-['React']`}>
+          <div
+            className={`${Styles.techStackBlock} after:content-['React'] hover:*:brightness-50`}
+          >
             <img src="/Images/React_IMAGE.svg" alt="Tech stack: React" />
           </div>
         </div>

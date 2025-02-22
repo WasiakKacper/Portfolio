@@ -43,9 +43,3 @@ section.loaderWrapper.unactive {
     background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
   }
 }
-
-@media (hover: hover) {
-  a:hover {
-    font-weight: 600;
-  }
-}

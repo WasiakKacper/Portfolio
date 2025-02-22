@@ -1,19 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joan&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joan&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --white: #e5e7f4;
   --violet: #99a2e4;
   --dark: #080a19;
 }
-
-* {
-  box-sizing: border-box;
-  font: 10px var(--dark);
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-}
-
 main#projects {
   width: 100%;
 }
@@ -58,3 +49,4 @@ main#projects section#galery div#twoInRow img {
     filter: blur(0.5px) brightness(0.2);
   }
 }
+ */
