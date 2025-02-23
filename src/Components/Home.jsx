@@ -1,4 +1,4 @@
-import Styles from "../../Styles.js";
+import Styles from "../Styles.js";
 
 function Home() {
   return (
@@ -7,10 +7,10 @@ function Home() {
       className="w-full  flex flex-col items-center justify-center my-10 md:my-50 z-1"
     >
       {/* HEADING */}
-      <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px]">
+      <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px] font-[Jost]">
         KACPER WASIAK
       </h1>
-      <h3 className="text-4xl my-5 font-[Jost]">Frontend developer</h3>
+      <h3 className="text-4xl my-5 font-[Joan]">Frontend developer</h3>
 
       {/* TECH STACK */}
       <section

@@ -1,4 +1,4 @@
-import Styles from "../../Styles.js";
+import Styles from "../Styles.js";
 
 function Nav() {
   return (
