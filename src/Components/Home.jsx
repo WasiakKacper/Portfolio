@@ -4,7 +4,7 @@ function Home() {
   return (
     <main
       id="home"
-      className="w-full  flex flex-col items-center justify-center my-10 md:my-50 z-1"
+      className="w-full  flex flex-col items-center justify-center my-10 md:my-60 z-1 "
     >
       {/* HEADING */}
       <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px] font-[Jost]">
@@ -20,15 +20,11 @@ function Home() {
         {/* LEFT */}
         <div className={`${Styles.techStackBolockWrapper} justify-end`}>
           {/* HTML */}
-          <div
-            className={`${Styles.techStackBlock} after:content-['HTML'] hover:*:brightness-50`}
-          >
+          <div className={`${Styles.techStackBlock} after:content-['HTML']`}>
             <img src="/Images/HTML_IMAGE.svg" alt="Tech stack: HTML" />
           </div>
           {/* CSS */}
-          <div
-            className={`${Styles.techStackBlock} after:content-['CSS'] hover:*:brightness-50`}
-          >
+          <div className={`${Styles.techStackBlock} after:content-['CSS']`}>
             <img src="/Images/CSS_IMAGE.svg" alt="Tech stack: CSS" />
           </div>
         </div>
@@ -37,7 +33,7 @@ function Home() {
         <div className={`${Styles.techStackBolockWrapper} justify-start`}>
           {/* JAVASCRIPT */}
           <div
-            className={`${Styles.techStackBlock} after:content-['JavaScript'] hover:*:brightness-50`}
+            className={`${Styles.techStackBlock} after:content-['JavaScript']`}
           >
             <img
               src="/Images/JavaScript_IMAGE.svg"
@@ -45,9 +41,7 @@ function Home() {
             />
           </div>
           {/* REACT */}
-          <div
-            className={`${Styles.techStackBlock} after:content-['React'] hover:*:brightness-50`}
-          >
+          <div className={`${Styles.techStackBlock} after:content-['React']`}>
             <img src="/Images/React_IMAGE.svg" alt="Tech stack: React" />
           </div>
         </div>
