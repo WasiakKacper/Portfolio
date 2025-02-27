@@ -1,7 +1,7 @@
 import Nav from "./Components/Nav.jsx";
 import Home from "./Components/Home.jsx";
 import Projects from "./Components/Projects.jsx";
-import About from "./Components/About/About.jsx";
+import About from "./Components/About.jsx";
 import "./App.css";
 import { useState, useEffect } from "react";
 
