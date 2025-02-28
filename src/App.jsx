@@ -2,6 +2,7 @@ import Nav from "./Components/Nav.jsx";
 import Home from "./Components/Home.jsx";
 import Projects from "./Components/Projects.jsx";
 import About from "./Components/About.jsx";
+import Contact from "./Components/Contact.jsx";
 import "./App.css";
 import { useState, useEffect } from "react";
 
@@ -22,7 +23,10 @@ function App() {
       <Nav />
       <Home />
       <Projects />
-      <About />
+      <section className="w-full h-full bg-[url(Images/background.png)] bg-cover">
+        <About />
+        <Contact />
+      </section>
     </>
   );
 }

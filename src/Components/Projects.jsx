@@ -10,19 +10,19 @@ function Projects() {
             <img
               src="/Images/Portfolio.png"
               alt=""
-              className="w-[80%] h-auto m-4 border-1 rounded-2xl z-1 hover:brightness-50"
+              className="w-[80%] h-auto m-4 border-1 rounded-2xl hover:brightness-50"
             />
           </div>
-          <div className="w-full flex flex-col md:flex-row justify-center">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center mx-auto">
             <img
               src="/Images/todolist.png"
               alt=""
-              className="w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
+              className="w-[80%] md:w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
             />
             <img
               src="/Images/weather.png"
               alt=""
-              className="w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
+              className="w-[80%] md:w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
             />
           </div>
         </section>

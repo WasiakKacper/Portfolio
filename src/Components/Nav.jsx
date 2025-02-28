@@ -2,7 +2,7 @@ import Styles from "../Styles.js";
 
 function Nav() {
   return (
-    <nav className="w-[60%] fixed bottom-0 left-1/2 -translate-x-1/2 bg-(--dark) rounded-t-3xl">
+    <nav className="w-[60%] fixed bottom-0 left-1/2 -translate-x-1/2 bg-(--dark) rounded-t-3xl z-10000">
       <ul className="w-full h-15 text-(--white) text-2xl lg:text-4xl font-[Joan] flex flex-row justify-center lg:gap-5 p-3 tracking-[3px] lg:tracking-[4px]">
         <li>
           <a href="#" className={Styles.aTag}>
