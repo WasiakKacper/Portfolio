@@ -7,7 +7,7 @@ function Home() {
       className="w-full  flex flex-col items-center justify-center my-10 md:my-60 z-1 "
     >
       {/* HEADING */}
-      <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px] font-[Jost]">
+      <h1 className="bg-(--dark) w-240 h-30 text-(--white) text-8xl font-bold  flex items-center justify-center tracking-[5px] font-[Jost] rounded-2xl">
         KACPER WASIAK
       </h1>
       <h3 className="text-4xl my-5 font-[Joan]">Frontend developer</h3>
@@ -25,7 +25,11 @@ function Home() {
           </div>
           {/* CSS */}
           <div className={`${Styles.techStackBlock} after:content-['CSS']`}>
-            <img src="/Images/CSS_IMAGE.svg" alt="Tech stack: CSS" />
+            <img
+              src="/Images/CSS_IMAGE.svg"
+              alt="Tech stack: CSS"
+              className="saturate-120"
+            />
           </div>
         </div>
 
