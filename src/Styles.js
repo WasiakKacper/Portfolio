@@ -4,7 +4,7 @@ const Styles = {
   techStackBolockWrapper: "flex flex-col md:flex-row gap-10",
   aTag: "block w-[100%] mx-1 transition duration-150 ease hover:opacity-80",
   inputText:
-    "bg-(--white) w-full md:w-[70%] py-[1%] px-5 rounded-4xl text-3xl font-[Joan] border-2 border-(--violet)",
+    "bg-(--white) w-full md:w-[70%] py-[1%] px-5 rounded-4xl text-3xl font-[Joan] border-2 border-(--violet) outline-none",
 };
 
 export default Styles;

@@ -32,11 +32,11 @@ function Contact() {
         <textarea
           name="text"
           placeholder="Wiadomość..."
-          className="bg-(--white) w-full h-90 rounded-4xl p-[2%] text-3xl font-[Joan] border-2 border-(--violet)"
+          className="bg-(--white) w-full h-90 rounded-4xl p-[2%] text-3xl font-[Joan] border-2 border-(--violet) outline-none"
         ></textarea>
         <button
           type="submit"
-          className="bg-(--violet) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer"
+          className="bg-(--violet) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer transition duration-300 ease hover:-translate-y-[10%]"
         >
           Wyślij
         </button>
