@@ -1,17 +1,45 @@
+import Style from "../Styles.js";
+
 function Contact() {
   return (
     <main id="contact w-full h-full flex flex-col justify-center">
       <div className="w-full flex justify-center">
-        <img src="/Images/Contact.svg" alt="Napisz do mnie" />
+        <img
+          src="/Images/Contact.svg"
+          alt="Napisz do mnie"
+          className="scale-90"
+        />
       </div>
-      <form action="POST">
-        <label htmlFor="email">E-mail</label>
-        <input type="email" name="email" />
-        <label htmlFor="title">Tytuł</label>
-        <input type="text" name="title" />
-        <label htmlFor="text">Wiadomość</label>
-        <textarea name="text"></textarea>
-        <button type="submit">Wyślij</button>
+      <form
+        action="POST"
+        className="w-[100%] h-full px-[20%] flex flex-col justify-center items-center pb-[5%]"
+      >
+        <div className="inputWrapper w-full flex flex-col md:flex-row gap-10 my-[2%]">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            className={Style.inputText}
+          />
+          <input
+            type="text"
+            name="title"
+            placeholder="Tytuł"
+            className={Style.inputText}
+          />
+        </div>
+
+        <textarea
+          name="text"
+          placeholder="Wiadomość..."
+          className="bg-(--white) w-full h-90 rounded-4xl p-[2%] text-3xl font-[Joan] border-2 border-(--violet)"
+        ></textarea>
+        <button
+          type="submit"
+          className="bg-(--violet) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer"
+        >
+          Wyślij
+        </button>
       </form>
     </main>
   );
