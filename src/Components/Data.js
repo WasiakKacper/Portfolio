@@ -1,4 +1,4 @@
-const homeData = [
+export const homeData = [
   {
     url: "/Images/HTML_IMAGE.svg",
     alt: "Tech stack: HTML",
@@ -21,4 +21,10 @@ const homeData = [
   },
 ];
 
-export default homeData;
+export const projectsData = [
+  {
+    url: "/Images/Portfolio.png",
+  },
+  { url: "/Images/todolist.png" },
+  { url: "/Images/weather.png" },
+];

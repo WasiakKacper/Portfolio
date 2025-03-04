@@ -1,28 +1,52 @@
+import { motion } from "motion/react";
+import PropTypes from "prop-types";
+import { projectsData } from "./Data";
+
 function Projects() {
+  const Project = (props) => {
+    return (
+      <motion.img
+        src={props.url}
+        alt=""
+        className={`${props.rowStyle} border border-(--dark) rounded-2xl hover:brightness-50 transition duration-300 ease cursor-pointer`}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.3, delay: props.sleep }}
+        viewport={{ once: true }}
+      />
+    );
+  };
+
+  Project.propTypes = {
+    url: PropTypes.string,
+    rowStyle: PropTypes.string,
+    sleep: PropTypes.number,
+  };
+
   return (
     <>
-      <main id="projects" className="w-full h-auto">
-        <h1 className="w-full text-center text-8xl font-semibold font-[Jost]">
+      <main id="projects" className="w-full h-auto pt-[5%]">
+        <motion.h1
+          className="w-full text-center text-8xl font-semibold font-[Jost] mb-[5%]"
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
           PROJEKTY
-        </h1>
-        <section id="galery" className="w-full my-20">
-          <div className=" w-full h-full flex flex-col justify-center items-center">
-            <img
-              src="/Images/Portfolio.png"
-              alt=""
-              className="w-[80%] h-auto m-4 border-1 rounded-2xl hover:brightness-50"
+        </motion.h1>
+        <section id="galery" className="w-full my-10 px-[10%]">
+          <Project url={projectsData[0].url} rowStyle="w-full" sleep={0.6} />
+          <div className="flex flex-col md:flex-row w-full justify-between my-[1%]">
+            <Project
+              url={projectsData[1].url}
+              rowStyle="w-[49.5%]"
+              sleep={0.1}
             />
-          </div>
-          <div className="w-full flex flex-col md:flex-row justify-center items-center mx-auto">
-            <img
-              src="/Images/todolist.png"
-              alt=""
-              className="w-[80%] md:w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
-            />
-            <img
-              src="/Images/weather.png"
-              alt=""
-              className="w-[80%] md:w-[39%] h-1/2 m-4 border-1 rounded-2xl hover:brightness-50"
+            <Project
+              url={projectsData[2].url}
+              rowStyle="w-[49.5%]"
+              sleep={0.2}
             />
           </div>
         </section>
