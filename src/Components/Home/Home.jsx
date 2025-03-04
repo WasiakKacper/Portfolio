@@ -7,6 +7,7 @@ import homeData from "./Data.js";
 function Home() {
   const [isActive, setIsActive] = useState(false);
 
+  /* Animation */
   useEffect(() => {
     window.addEventListener("load", () => {
       setTimeout(() => {
@@ -16,21 +17,25 @@ function Home() {
     });
   }, []);
 
+  /* TechStack component */
   const TechStackTile = (props) => {
     return (
-      <div
-        className={`${Styles.techStackBlock} after:content-['${props.after}']`}
+      <motion.div
+        className={Styles.techStackBlock}
+        initial={{ opacity: 0 }}
+        animate={isActive ? { opacity: 1 } : {}}
+        transition={isActive ? { delay: props.sleep, duration: 0.1 } : {}}
       >
         <motion.img
           src={props.url}
           alt={props.alt}
           initial={{ translateY: 20, opacity: 0 }}
-          animate={
-            isActive ? { translateY: 0, opacity: 1, type: "spring" } : {}
-          }
+          animate={isActive ? { translateY: 0, opacity: 1 } : {}}
           transition={isActive ? { delay: props.sleep, duration: 0.1 } : {}}
+          className="group-hover:brightness-50"
         />
-      </div>
+        <span className={Styles.span}>{props.technologyName}</span>
+      </motion.div>
     );
   };
 
@@ -38,17 +43,17 @@ function Home() {
     url: PropTypes.string,
     alt: PropTypes.string,
     sleep: PropTypes.number,
-    after: PropTypes.string,
+    technologyName: PropTypes.string,
   };
 
   return (
     <main
       id="home"
-      className="w-full  flex flex-col items-center justify-center my-10 md:my-60 z-1 "
+      className="w-full  flex flex-col items-center justify-center my-10 md:my-60 z-1"
     >
       {/* HEADING */}
       <motion.h1
-        className="bg-(--dark) w-240 h-full text-8xl text-(--white) font-bold  flex items-center justify-center tracking-[5px] font-[Jost] rounded-2xl   transition duration-500 ease-in-out"
+        className={Styles.h1}
         initial={{ scaleY: 0 }}
         animate={isActive ? { scaleY: 1 } : {}}
         transition={isActive ? { duration: 0.3, ease: "easeInOut" } : {}}
@@ -72,38 +77,38 @@ function Home() {
         className="flex flex-col md:flex-row w-full items-center justify-center gap-10"
       >
         {/* LEFT */}
-        <div className={`${Styles.techStackBolockWrapper} justify-end`}>
+        <div className={`${Styles.techStackBlockWrapper} justify-end`}>
           {/* HTML */}
           <TechStackTile
             url={homeData[0].url}
             alt={homeData[0].alt}
             sleep={1.2}
-            after={"HTML"}
+            technologyName={homeData[0].name}
           />
           {/* CSS */}
           <TechStackTile
             url={homeData[1].url}
             alt={homeData[1].alt}
             sleep={1.3}
-            after={"CSS"}
+            technologyName={homeData[1].name}
           />
         </div>
 
         {/* RIGHT */}
-        <div className={`${Styles.techStackBolockWrapper} justify-start`}>
+        <div className={`${Styles.techStackBlockWrapper} justify-start`}>
           {/* JAVASCRIPT */}
           <TechStackTile
             url={homeData[2].url}
             alt={homeData[2].alt}
             sleep={1.4}
-            after={"JavaScript"}
+            technologyName={homeData[2].name}
           />
           {/* REACT */}
           <TechStackTile
             url={homeData[3].url}
             alt={homeData[3].alt}
             sleep={1.5}
-            after={"React"}
+            technologyName={homeData[3].name}
           />
         </div>
       </section>
