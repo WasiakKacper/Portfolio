@@ -10,7 +10,7 @@ function About() {
           className="h-[300px]"
           initial={{ height: 0 }}
           whileInView={{ height: 300 }}
-          transition={{ duration: 0.4, delay: 0.5 }}
+          transition={{ duration: 0.4, delay: 0.8 }}
           viewport={{ once: true }}
         />
       </div>
@@ -18,7 +18,7 @@ function About() {
         className="text-5xl w-[50%] my-30 mx-auto text-(--white) pb-30"
         initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.6 }}
+        transition={{ duration: 0.4, delay: 0.8 }}
         viewport={{ once: true }}
       >
         Lotem ipsum sit dolor amet Lotem ipsum sit dolor amet Lotem ipsum sit

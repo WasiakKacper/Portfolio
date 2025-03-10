@@ -7,14 +7,14 @@ function Projects() {
     return (
       <motion.div
         className="w-[full] flex flex-col md:flex-row justify-between bg-(--white) p-[2%] rounded-2xl mx-[10%]"
-        initial={{ translateY: -200, opacity: 0 }}
+        initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.img src={props.url} alt="" className="w-[45%] rounded-2xl" />
-        <div className="w-[45%] flex flex-col text-3xl text-[Iner] items-center justify-between">
-          <p>{props.description}</p>
+        <div className="w-[45%] h-[20%] flex flex-col text-3xl text-[Iner] items-center justify-between">
+          <p className="h-80%">{props.description}</p>
           <div className="w-full flex *:mr-10 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
             <a
               href="#"
