@@ -24,7 +24,18 @@ export const homeData = [
 export const projectsData = [
   {
     url: "/Images/Portfolio.png",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Consectetur voluptatum velit ullam sint aut ea ex blanditiis soluta,fugiat quidem veritatis consequatur voluptas earum tempora a quorem, dolorum deserunt. Lorem ipsum, dolor sit amet consecteturadipisicing elit. Harum dolor in autem perspiciatis aspernaturaliquid.",
   },
-  { url: "/Images/todolist.png" },
-  { url: "/Images/weather.png" },
+  {
+    url: "/Images/todolist.png",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Consectetur voluptatum velit ullam sint aut ea ex blanditiis soluta,fugiat quidem veritatis consequatur voluptas earum tempora a quorem, dolorum deserunt. Lorem ipsum, dolor sit amet consecteturadipisicing elit. Harum dolor in autem perspiciatis aspernaturaliquid nulla laborum dolore possimus quia. Labore illo nesciuntoptio molestiasSapiente fuga minima odio natus?",
+  },
+
+  {
+    url: "/Images/weather.png",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Consectetur voluptatum velit ullam sint aut ea ex blanditiis soluta,fugiat quidem veritatis consequatur voluptas earum tempora a quorem, dolorum deserunt. Lorem ipsum, dolor sit amet consecteturadipisicing elit. Harum dolor in autem perspiciatis aspernaturaliquid nulla laborum dolore possimus quia. Labore illo nesciuntoptio molestiasSapiente fuga minima odio natus?",
+  },
 ];

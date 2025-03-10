@@ -36,7 +36,7 @@ function Contact() {
         ></textarea>
         <button
           type="submit"
-          className="bg-(--violet) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer transition duration-300 ease hover:-translate-y-[10%]"
+          className="bg-(--coral) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer transition duration-300 ease hover:-translate-y-[10%]"
         >
           Wyślij
         </button>
