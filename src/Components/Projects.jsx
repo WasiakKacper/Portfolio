@@ -6,16 +6,17 @@ function Projects() {
   const Project = (props) => {
     return (
       <motion.div
-        className="w-[full] flex flex-col md:flex-row justify-between bg-(--white) p-[2%] rounded-2xl mx-[10%]"
+        className="w-[30%] flex flex-col bg-(--white) px-5% px-[0.8%] py-[0.8%] rounded-[1.5em]"
         initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: props.sleep }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.img src={props.url} alt="" className="w-[45%] rounded-2xl" />
-        <div className="w-[45%] h-[20%] flex flex-col text-3xl text-[Iner] items-center justify-between">
-          <p className="h-80%">{props.description}</p>
-          <div className="w-full flex *:mr-10 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
+        <motion.img src={props.url} alt="" className="block rounded-[1em]" />
+        <div className="w-full">
+          <h3 className="text-3xl font-[Inter] my-5%">{props.title}</h3>
+          <p className="mb-[5%]">{props.description}</p>
+          <div className="w-full flex *:mr-5 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
             <a
               href="#"
               className="hover:-translate-y-1.5 transition duration-300 ease"
@@ -36,8 +37,8 @@ function Projects() {
 
   Project.propTypes = {
     url: PropTypes.string,
-    rowStyle: PropTypes.string,
     sleep: PropTypes.number,
+    title: PropTypes.string,
     description: PropTypes.string,
   };
 
@@ -55,19 +56,26 @@ function Projects() {
         </motion.h1>
         <section
           id="galery"
-          className="w-full h-auto flex flex-col items-center gap-7"
+          className="w-full flex felx-row 
+        justify-evenly"
         >
           <Project
             url={projectsData[0].url}
+            title={"Portfolio"}
             description={projectsData[0].description}
+            sleep={0.6}
           />
           <Project
             url={projectsData[1].url}
+            title={"ToDoList"}
             description={projectsData[0].description}
+            sleep={0.7}
           />
           <Project
             url={projectsData[2].url}
+            title={"Weather"}
             description={projectsData[0].description}
+            sleep={0.9}
           />
         </section>
       </section>
