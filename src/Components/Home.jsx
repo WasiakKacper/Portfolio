@@ -49,7 +49,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="w-full  flex flex-col items-center justify-center mt-20 mb-30 md:my-60 z-1"
+      className="w-full  flex flex-col items-center justify-center mt-20 mb-30 md:my-35 z-1"
     >
       {/* HEADING */}
       <motion.h1

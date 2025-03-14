@@ -5,7 +5,6 @@ import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
 import "./App.css";
 import { useState, useEffect } from "react";
-import { motion } from "motion/react";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,16 +23,8 @@ function App() {
       <Nav />
       <Home />
       <Projects />
-      <motion.section
-        className="w-full h-full  bg-[url(Images/background.png)] bg-cover"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        viewport={{ amount: 0.3 }}
-      >
-        <About />
-        <Contact />
-      </motion.section>
+      <About />
+      <Contact />
     </>
   );
 }

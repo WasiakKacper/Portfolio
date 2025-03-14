@@ -9,12 +9,12 @@ function Projects() {
         className="w-[30%] flex flex-col bg-(--white) px-5% px-[0.8%] py-[0.8%] rounded-[1.5em]"
         initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ duration: 0.3, delay: props.sleep }}
+        transition={{ duration: 0.2, delay: props.sleep }}
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.img src={props.url} alt="" className="block rounded-[1em]" />
         <div className="w-full">
-          <h3 className="text-3xl font-[Inter] my-5%">{props.title}</h3>
+          <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
           <p className="mb-[5%]">{props.description}</p>
           <div className="w-full flex *:mr-5 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
             <a
@@ -45,15 +45,9 @@ function Projects() {
   return (
     <>
       <section id="projects" className="w-full h-auto pt-[5%] mb-[10%]">
-        <motion.h1
-          className="w-full text-center text-8xl font-semibold font-[Jost] mb-[5%]"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.3, delay: 0.5 }}
-          viewport={{ once: true, amount: 1 }}
-        >
+        <h1 className="w-full text-center text-8xl font-semibold font-[Jost] mb-[5%]">
           PROJEKTY
-        </motion.h1>
+        </h1>
         <section
           id="galery"
           className="w-full flex felx-row 
@@ -63,19 +57,19 @@ function Projects() {
             url={projectsData[0].url}
             title={"Portfolio"}
             description={projectsData[0].description}
-            sleep={0.6}
+            sleep={0.3}
           />
           <Project
             url={projectsData[1].url}
             title={"ToDoList"}
             description={projectsData[0].description}
-            sleep={0.7}
+            sleep={0.4}
           />
           <Project
             url={projectsData[2].url}
             title={"Weather"}
             description={projectsData[0].description}
-            sleep={0.9}
+            sleep={0.5}
           />
         </section>
       </section>
