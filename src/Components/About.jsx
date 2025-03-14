@@ -18,7 +18,7 @@ function About() {
         className="text-5xl w-[50%] my-30 mx-auto text-(--white) pb-30 z-10"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.3 }}
         viewport={{ amount: 0.4, once: true }}
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi in

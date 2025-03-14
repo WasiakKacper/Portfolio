@@ -2,46 +2,49 @@ import Style from "../Styles.js";
 
 function Contact() {
   return (
-    <main id="contact w-full h-full flex flex-col justify-center">
-      <div className="w-full flex justify-center">
+    <section className="w-full h-[950px] flex flex-row px-[3%] py-[3%] justify-between">
+      <div className="w-[40%]">
         <img
           src="/Images/Contact.svg"
           alt="Napisz do mnie"
-          className="scale-90"
+          className="mt-[15%]"
         />
       </div>
       <form
-        action="POST"
-        className="w-[100%] h-full px-[20%] flex flex-col justify-center items-center pb-[5%]"
+        action=""
+        className="w-[60%] h-[90%] bg-(--dark) p-[5%] flex flex-col **:rounded-2xl **:font-[Jost]"
       >
-        <div className="inputWrapper w-full flex flex-col md:flex-row gap-10 my-[2%]">
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            className={Style.inputText}
-          />
-          <input
-            type="text"
-            name="title"
-            placeholder="Tytuł"
-            className={Style.inputText}
-          />
+        <div className="flex flex-row justify-between mt-[2%] *:text-3xl">
+          <label className="w-[48%] flex flex-col">
+            <span className="text-2xl text-(--white)">E-mail:</span>
+            <input
+              type="email"
+              name="email"
+              className=" bg-(--white) p-[1%] pl-[2%]"
+            />
+          </label>
+          <label className="w-[48%] flex flex-col">
+            <span className="text-2xl text-(--white) ml-2">Temat:</span>
+            <input
+              type="topic"
+              name="topic"
+              className=" bg-(--white) p-[1%] pl-[2%]"
+            />
+          </label>
         </div>
+        <label className="w-full h-[70%] flex flex-col mt-[5%]">
+          <span className="text-2xl text-(--white) ml-2">Wiadomosc:</span>
+          <textarea
+            name="messange"
+            className="h-full bg-(--white) p-[1%]"
+          ></textarea>
+        </label>
 
-        <textarea
-          name="text"
-          placeholder="Wiadomość..."
-          className="bg-(--white) w-full h-90 rounded-4xl p-[2%] text-3xl font-[Joan] border-2 border-(--violet) outline-none"
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-(--coral) font-[Joan] text-(--white) text-5xl py-[1%] px-[6%] mt-[3%] rounded-4xl cursor-pointer transition duration-300 ease hover:-translate-y-[10%]"
-        >
+        <button className="w-[30%] bg-(--white) p-[1%] mt-[7%] text-4xl text-(--dark) font-medium hover:-translate-y-2 transition duration-300 ease cursor-pointer">
           Wyślij
         </button>
       </form>
-    </main>
+    </section>
   );
 }
 
