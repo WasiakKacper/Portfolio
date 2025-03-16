@@ -5,6 +5,7 @@ import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Element } from "react-scroll";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,10 +22,18 @@ function App() {
         <div className="loader"></div>
       </section>
       <Nav />
-      <Home />
-      <Projects />
-      <About />
-      <Contact />
+      <Element name="/">
+        <Home />
+      </Element>
+      <Element name="/projects">
+        <Projects />
+      </Element>
+      <Element name="/about">
+        <About />
+      </Element>
+      <Element name="/contact">
+        <Contact />
+      </Element>
     </>
   );
 }

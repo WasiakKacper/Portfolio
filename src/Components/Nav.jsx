@@ -1,6 +1,7 @@
 import Styles from "../Styles.js";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-scroll";
 
 function Nav() {
   const [isActive, setIsActive] = useState(false);
@@ -21,24 +22,48 @@ function Nav() {
     >
       <ul className="w-full h-15 text-(--white) text-2xl lg:text-4xl font-[Joan] flex flex-row justify-center lg:gap-5 p-3 tracking-[3px] lg:tracking-[4px]">
         <li>
-          <a href="#" className={Styles.aTag}>
+          <Link
+            to="/"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={Styles.aTag}
+          >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={Styles.aTag}>
+          <Link
+            to="/projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={Styles.aTag}
+          >
             Projekty
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={Styles.aTag}>
+          <Link
+            to="/about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={Styles.aTag}
+          >
             O mnie
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={Styles.aTag}>
+          <Link
+            to="/contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={Styles.aTag}
+          >
             Kontakt
-          </a>
+          </Link>
         </li>
       </ul>
     </motion.nav>

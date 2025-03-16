@@ -17,23 +17,15 @@ function Contact() {
         <div className="flex flex-row justify-between mt-[2%] *:text-3xl">
           <label className="w-[48%] flex flex-col">
             <span className="text-2xl text-(--white)">E-mail:</span>
-            <input
-              type="email"
-              name="email"
-              className=" bg-(--white) p-[1%] pl-[2%]"
-            />
+            <input type="email" name="email" className={Style.inputText} />
           </label>
           <label className="w-[48%] flex flex-col">
-            <span className="text-2xl text-(--white) ml-2">Temat:</span>
-            <input
-              type="topic"
-              name="topic"
-              className=" bg-(--white) p-[1%] pl-[2%]"
-            />
+            <span className={Style.inputTextSpan}>Temat:</span>
+            <input type="topic" name="topic" className={Style.inputText} />
           </label>
         </div>
         <label className="w-full h-[70%] flex flex-col mt-[5%]">
-          <span className="text-2xl text-(--white) ml-2">Wiadomosc:</span>
+          <span className={Style.inputTextSpan}>Wiadomosc:</span>
           <textarea
             name="messange"
             className="h-full bg-(--white) p-[1%]"
