@@ -49,7 +49,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="w-full  flex flex-col items-center justify-center mt-20 mb-30 md:my-35 z-1"
+      className="w-full h-[100vh]  flex flex-col items-center justify-center z-1"
     >
       {/* HEADING */}
       <motion.h1
@@ -61,7 +61,7 @@ function Home() {
         KACPER WASIAK
       </motion.h1>
       <motion.h3
-        className="text-4xl my-5 font-[Joan]"
+        className="text-3xl md:text-4xl my-5 font-[Joan]"
         initial={{ translateY: 20, opacity: 0 }}
         animate={isActive ? { translateY: 0, opacity: 1 } : {}}
         transition={
@@ -74,7 +74,7 @@ function Home() {
       {/* TECH STACK */}
       <section
         id="wrapper"
-        className="flex flex-col md:flex-row w-full items-center justify-center gap-10"
+        className="flex w-[80%] md:w-[85%] flex-row gap-4 md:gap-7 items-center justify-center"
       >
         {/* LEFT */}
         <div className={`${Styles.techStackBlockWrapper} justify-end`}>

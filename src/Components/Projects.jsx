@@ -6,7 +6,7 @@ function Projects() {
   const Project = (props) => {
     return (
       <motion.div
-        className="w-[30%] flex flex-col bg-(--white) px-5% px-[0.8%] py-[0.8%] rounded-[1.5em]"
+        className="w-[90%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
         initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 0.2, delay: props.sleep }}
@@ -45,14 +45,10 @@ function Projects() {
   return (
     <>
       <section id="projects" className="w-full h-auto pt-[5%] mb-[10%]">
-        <h1 className="w-full text-center text-8xl font-semibold font-[Jost] mb-[5%]">
+        <h1 className="w-full text-center text-7xl lg:text-8xl font-semibold font-[Jost] mb-[5%]">
           PROJEKTY
         </h1>
-        <section
-          id="galery"
-          className="w-full flex felx-row 
-        justify-evenly"
-        >
+        <section id="galery" className="w-full flex flex-col lg:flex-row">
           <Project
             url={projectsData[0].url}
             title={"Portfolio"}

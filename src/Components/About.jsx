@@ -4,18 +4,18 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full h-[1000px] bg-[url('Images/background.png')] bg-cover bg-center bg-fixed"
+      className="w-full h-[100vh] bg-[url('Images/background.png')] bg-cover bg-center bg-fixed"
     >
       <motion.img
         src="/Images/About.svg"
         alt="O mnie"
-        className="h-[300px] mx-auto z-10"
+        className="h-[200px] md:h-[300px] mx-auto"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ amount: 1, once: true }}
       />
       <motion.p
-        className="text-5xl w-[50%] my-30 mx-auto text-(--white) pb-30 z-10"
+        className="text-2xl md:text-4xl lg:text-5xl w-[90%] mt-40 md:mt-10 lg:mt-30 mx-auto text-(--white)"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
