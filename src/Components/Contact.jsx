@@ -22,7 +22,9 @@ function Contact() {
     e.preventDefault();
 
     const errors = {
-      email: !email.trim() || ![a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email),
+      email:
+        !email.trim() ||
+        !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email),
       title: !title.trim(),
       message: !message.trim(),
     };
