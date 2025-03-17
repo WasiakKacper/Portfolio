@@ -15,7 +15,7 @@ function About() {
         viewport={{ amount: 1, once: true }}
       />
       <motion.p
-        className="text-2xl md:text-4xl lg:text-5xl w-[90%] mt-40 md:mt-10 lg:mt-30 mx-auto text-(--white)"
+        className="text-2xl md:text-4xl lg:text-5xl w-[80%] mt-[5%] mx-auto text-(--white)"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}

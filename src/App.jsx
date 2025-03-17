@@ -1,9 +1,11 @@
+import "./App.css";
+
 import Nav from "./Components/Nav.jsx";
 import Home from "./Components/Home.jsx";
 import Projects from "./Components/Projects.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
-import "./App.css";
+
 import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
 

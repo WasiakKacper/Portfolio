@@ -14,7 +14,7 @@ function Nav() {
 
   return (
     <motion.nav
-      className="w-[60%] fixed bottom-0 left-1/2 -translate-x-1/2 bg-(--dark) rounded-t-3xl z-10000"
+      className="w-[99%] md:w-[60%] fixed bottom-0 left-1/2 -translate-x-1/2 bg-(--dark) rounded-t-3xl z-10000"
       initial={{ scaleY: 0, height: 0 }}
       whileInView={isActive ? { scaleY: 1, height: "auto" } : {}}
       transition={{ duration: 0.4, delay: 2.3 }}

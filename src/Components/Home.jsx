@@ -1,11 +1,12 @@
 import Styles from "../Styles.js";
+
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 import { homeData } from "./Data.js";
 
 function Home() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false); //Load animations
 
   /* Animation */
   useEffect(() => {
