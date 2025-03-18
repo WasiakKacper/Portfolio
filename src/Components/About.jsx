@@ -4,7 +4,7 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full h-[auto] lg:h-[100vh] bg-[url('Images/background.png')] bg-cover bg-center bg-fixed flex flex-col justify-between py-[5%]"
+      className="w-full h-[auto] lg:h-[100vh] bg-[url('/Images/background.png')] bg-cover bg-center bg-fixed flex flex-col justify-between py-[5%]"
     >
       <motion.img
         src="/Images/About.svg"
