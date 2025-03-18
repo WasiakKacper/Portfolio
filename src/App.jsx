@@ -1,7 +1,7 @@
 import "./App.css";
 
 const Nav = lazy(() => import("./Components/Nav.jsx"));
-import Home from "./Components/Home.jsx";
+const Home = lazy(() => import("./Components/Home.jsx"));
 const Projects = lazy(() => import("./Components/Projects.jsx"));
 const About = lazy(() => import("./Components/About.jsx"));
 const Contact = lazy(() => import("./Components/Contact.jsx"));
@@ -16,6 +16,7 @@ function App() {
     setTimeout(() => {
       setIsLoaded(true);
     }, 1000);
+    clearTimeout();
   }, []);
 
   return (
