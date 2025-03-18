@@ -1,12 +1,12 @@
 import "./App.css";
 
-import Nav from "./Components/Nav.jsx";
+const Nav = lazy(() => import("./Components/Nav.jsx"));
 import Home from "./Components/Home.jsx";
-import Projects from "./Components/Projects.jsx";
-import About from "./Components/About.jsx";
-import Contact from "./Components/Contact.jsx";
+const Projects = lazy(() => import("./Components/Projects.jsx"));
+const About = lazy(() => import("./Components/About.jsx"));
+const Contact = lazy(() => import("./Components/Contact.jsx"));
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 import { Element } from "react-scroll";
 
 function App() {
