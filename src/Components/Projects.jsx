@@ -6,26 +6,28 @@ function Projects() {
   const Project = (props) => {
     return (
       <motion.div
-        className="w-[90%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
+        className="w-[90%] h-[100%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
         initial={{ translateY: 200, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 0.2, delay: props.sleep }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.img src={props.url} alt="" className="block rounded-[1em]" />
-        <div className="w-full">
-          <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
+        <motion.img src={props.url} className="block rounded-[1em]" />
+        <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
+        <div className="h-full flex flex-col justify-between">
           <p className="mb-[5%]">{props.description}</p>
           <div className="w-full flex *:mr-5 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
             <a
-              href="#"
+              href={props.link}
               className="hover:-translate-y-1.5 transition duration-300 ease"
+              target="_blank"
             >
               Zobacz stronę
             </a>
             <a
-              href="#"
+              href={props.repoLink}
               className="hover:-translate-y-1.5 transition duration-300 ease"
+              target="_blank"
             >
               Zobacz kod
             </a>
@@ -40,6 +42,8 @@ function Projects() {
     sleep: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
+    link: PropTypes.string,
+    repoLink: PropTypes.string,
   };
 
   return (
@@ -48,23 +52,32 @@ function Projects() {
         <h1 className="w-full text-center text-7xl lg:text-8xl font-semibold font-[Jost] mb-[5%]">
           PROJEKTY
         </h1>
-        <section id="galery" className="w-full flex flex-col lg:flex-row">
+        <section
+          id="galery"
+          className="w-full lg:h-[700px] flex flex-col lg:flex-row"
+        >
           <Project
             url={projectsData[0].url}
             title={"Portfolio"}
             description={projectsData[0].description}
+            link={projectsData[0].link}
+            repoLink={projectsData[0].repoLink}
             sleep={0.3}
           />
           <Project
             url={projectsData[1].url}
             title={"ToDoList"}
-            description={projectsData[0].description}
+            description={projectsData[1].description}
+            link={projectsData[1].link}
+            repoLink={projectsData[1].repoLink}
             sleep={0.4}
           />
           <Project
             url={projectsData[2].url}
             title={"Weather"}
-            description={projectsData[0].description}
+            description={projectsData[2].description}
+            link={projectsData[2].link}
+            repoLink={projectsData[2].repoLink}
             sleep={0.5}
           />
         </section>
