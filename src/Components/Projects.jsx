@@ -2,50 +2,50 @@ import { motion } from "motion/react";
 import PropTypes from "prop-types";
 import { projectsData } from "./Data";
 
-function Projects() {
-  const Project = (props) => {
-    return (
-      <motion.div
-        className="w-[90%] h-[100%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
-        initial={{ translateY: 200, opacity: 0 }}
-        whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ duration: 0.2, delay: props.sleep }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.img src={props.url} className="block rounded-[1em]" />
-        <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
-        <div className="h-full flex flex-col justify-between">
-          <p className="mb-[5%]">{props.description}</p>
-          <div className="w-full flex *:mr-5 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
-            <a
-              href={props.link}
-              className="hover:-translate-y-1.5 transition duration-300 ease"
-              target="_blank"
-            >
-              Zobacz stronę
-            </a>
-            <a
-              href={props.repoLink}
-              className="hover:-translate-y-1.5 transition duration-300 ease"
-              target="_blank"
-            >
-              Zobacz kod
-            </a>
-          </div>
+const Project = (props) => {
+  return (
+    <motion.div
+      className="w-[90%] h-[100%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
+      initial={{ translateY: 200, opacity: 0 }}
+      whileInView={{ translateY: 0, opacity: 1 }}
+      transition={{ duration: 0.2, delay: props.sleep }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <motion.img src={props.url} className="block rounded-[1em]" />
+      <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
+      <div className="h-full flex flex-col justify-between">
+        <p className="mb-[5%]">{props.description}</p>
+        <div className="w-full flex *:mr-5 *:bg-(--dark) *:text-(--white) *:py-[1%] *:px-[2%] *:rounded-2xl">
+          <a
+            href={props.link}
+            className="hover:-translate-y-1.5 transition duration-300 ease"
+            target="_blank"
+          >
+            Zobacz stronę
+          </a>
+          <a
+            href={props.repoLink}
+            className="hover:-translate-y-1.5 transition duration-300 ease"
+            target="_blank"
+          >
+            Zobacz kod
+          </a>
         </div>
-      </motion.div>
-    );
-  };
+      </div>
+    </motion.div>
+  );
+};
 
-  Project.propTypes = {
-    url: PropTypes.string,
-    sleep: PropTypes.number,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    link: PropTypes.string,
-    repoLink: PropTypes.string,
-  };
+Project.propTypes = {
+  url: PropTypes.string,
+  sleep: PropTypes.number,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  link: PropTypes.string,
+  repoLink: PropTypes.string,
+};
 
+function Projects() {
   return (
     <>
       <section id="projects" className="w-full h-auto pt-[5%] mb-[10%]">

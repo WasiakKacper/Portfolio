@@ -9,7 +9,7 @@ function Nav() {
   useEffect(() => {
     setTimeout(() => {
       setIsActive(true);
-    }, 600);
+    }, 1600);
   }, []);
 
   return (

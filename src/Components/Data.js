@@ -1,21 +1,21 @@
 export const homeData = [
   {
-    url: "/Images/HTML_IMAGE.svg",
+    url: "/Images/HTML_IMAGE.png",
     alt: "Tech stack: HTML",
     name: "HTML",
   },
   {
-    url: "/Images/CSS_IMAGE.svg",
+    url: "/Images/CSS_IMAGE.png",
     alt: "Tech stack: CSS",
     name: "CSS",
   },
   {
-    url: "/Images/JavaScript_IMAGE.svg",
+    url: "/Images/JavaScript_IMAGE.png",
     alt: "Tech stack: JavaScript",
     name: "JavaScript",
   },
   {
-    url: "/Images/React_IMAGE.svg",
+    url: "/Images/React_IMAGE.png",
     alt: "Tech stack: React",
     name: "React",
   },
