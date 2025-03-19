@@ -69,7 +69,7 @@ function Contact() {
       {isSend ? (
         <>
           {/* POP-UP */}
-          <div className="fixed w-[25%] h-[40%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl bg-(--white) font-[Jost] font-medium flex flex-col justify-around items-center rounded-2xl z-100">
+          <div className="fixed w-[90%] md:w-[90%] lg:w-[30%] h-[40%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl bg-(--white) font-[Jost] font-medium flex flex-col justify-around items-center rounded-2xl z-100 border-1 border-(--dark)">
             <h2>Wysłano</h2>
             <button
               onClick={() => {
