@@ -8,7 +8,7 @@ function Nav() {
       className="w-[99%] md:w-[70%] fixed bottom-0 left-1/2 -translate-x-1/2 bg-(--dark) rounded-t-3xl z-10000"
       initial={{ scaleY: 0, height: 0 }}
       whileInView={{ scaleY: 1, height: "auto" }}
-      transition={{ duration: 0.4, delay: 2.3 }}
+      transition={{ duration: 0.4, delay: 2 }}
       viewport={{ once: true }}
     >
       <ul className="w-full h-12 lg:h-15 text-(--white) text-xl lg:text-2xl font-[Joan] flex flex-row justify-center lg:gap-2 p-3 tracking-[3px] lg:tracking-[4px]">
