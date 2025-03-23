@@ -4,7 +4,7 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full h-[auto] lg:h-[100vh] bg-[url('/Images/background.png')] bg-cover bg-center bg-fixed flex flex-col justify-between py-[5%]"
+      className="relative w-full h-[100vh] lg:h-[98vh] bg-[url('/Images/background.png')] bg-cover bg-center bg-fixed flex flex-col justify-evenly before:content-[''] before:block lg:before:none before:absolute before:inset-0 before:bg-black/10 before:brightness-75 *:z-10"
     >
       <motion.img
         src="/Images/About.svg"
@@ -15,7 +15,7 @@ function About() {
         viewport={{ amount: 1, once: true }}
       />
       <motion.p
-        className="text-xl md:text-3xl w-[80%] mt-[5%] mx-auto text-(--white)"
+        className="w-[80%] h-[50%] overflow-y-scroll lg:overflow-y-auto text-(--white) text-xl md:text-3xl mt-[5%] mb-[5%] mx-auto "
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
