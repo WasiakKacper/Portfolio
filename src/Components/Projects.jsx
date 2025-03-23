@@ -5,7 +5,7 @@ import { projectsData } from "./Data";
 const Project = (props) => {
   return (
     <motion.div
-      className="w-[90%] h-[100%] lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%]"
+      className="w-[90%] h-99% lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%] lg:mb-0"
       initial={{ translateY: 200, opacity: 0 }}
       whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 0.2, delay: props.sleep }}
@@ -48,14 +48,11 @@ Project.propTypes = {
 function Projects() {
   return (
     <>
-      <section id="projects" className="w-full h-auto pt-[5%] mb-[10%]">
+      <section className="w-full h-auto pt-[5%] mb-[10%]">
         <h1 className="w-full text-center text-7xl lg:text-8xl font-semibold font-[Jost] mb-[5%]">
           PROJEKTY
         </h1>
-        <section
-          id="galery"
-          className="w-full lg:h-[700px] flex flex-col lg:flex-row"
-        >
+        <section className="w-full h-auto flex flex-col lg:flex-row">
           <Project
             url={projectsData[0].url}
             title={"Portfolio"}
