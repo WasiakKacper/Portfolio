@@ -5,7 +5,7 @@ import { projectsData } from "./Data";
 const Project = (props) => {
   return (
     <motion.div
-      className="w-[90%] h-99% lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mx-auto mb-[5%] lg:mb-0"
+      className="w-[90%] h-99% lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mb-[5%] lg:mb-0 mt-10"
       initial={{ translateY: 200, opacity: 0 }}
       whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 0.2, delay: props.sleep }}
@@ -52,31 +52,41 @@ function Projects() {
         <h1 className="w-full text-center text-7xl lg:text-8xl font-semibold font-[Jost] mb-[5%]">
           PROJEKTY
         </h1>
-        <section className="w-full h-auto flex flex-col lg:flex-row">
-          <Project
-            url={projectsData[0].url}
-            title={"Portfolio"}
-            description={projectsData[0].description}
-            link={projectsData[0].link}
-            repoLink={projectsData[0].repoLink}
-            sleep={0.3}
-          />
-          <Project
-            url={projectsData[1].url}
-            title={"ToDoList"}
-            description={projectsData[1].description}
-            link={projectsData[1].link}
-            repoLink={projectsData[1].repoLink}
-            sleep={0.4}
-          />
-          <Project
-            url={projectsData[2].url}
-            title={"Weather"}
-            description={projectsData[2].description}
-            link={projectsData[2].link}
-            repoLink={projectsData[2].repoLink}
-            sleep={0.5}
-          />
+        <section className="w-[90%] mx-auto">
+          <section className="w-full h-auto flex flex-col flex-wrap lg:flex-row lg:flex-wrap items-left justify-start gap-[5%]">
+            <Project
+              url={projectsData[0].url}
+              title={"Portfolio"}
+              description={projectsData[0].description}
+              link={projectsData[0].link}
+              repoLink={projectsData[0].repoLink}
+              sleep={0.3}
+            />
+            <Project
+              url={projectsData[1].url}
+              title={"ToDoList"}
+              description={projectsData[1].description}
+              link={projectsData[1].link}
+              repoLink={projectsData[1].repoLink}
+              sleep={0.4}
+            />
+            <Project
+              url={projectsData[2].url}
+              title={"Weather"}
+              description={projectsData[2].description}
+              link={projectsData[2].link}
+              repoLink={projectsData[2].repoLink}
+              sleep={0.5}
+            />
+            <Project
+              url={projectsData[3].url}
+              title={"Fabryka Warzyw"}
+              description={projectsData[3].description}
+              link={projectsData[3].link}
+              repoLink={projectsData[3].repoLink}
+              sleep={0.5}
+            />
+          </section>
         </section>
       </section>
     </>

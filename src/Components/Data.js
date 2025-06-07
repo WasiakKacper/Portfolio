@@ -44,4 +44,11 @@ export const projectsData = [
     link: "https://weather-kacperwasiak.netlify.app/",
     repoLink: "https://github.com/WasiakKacper/Weather",
   },
+  {
+    url: "/Images/fabrykawarzyw.png",
+    description:
+      "Sklep internetowy to nowoczesna strona umożliwiająca przeglądanie, filtrowanie i zamawianie produktów dostępnych w ofercie. Została stworzona w React z wykorzystaniem Tailwind CSS. Backend oparty na Express i MongoDB obsługuje rejestrację, logowanie użytkowników oraz zarządzanie produktami. Zdjęcia są przesyłane i przechowywane dzięki integracji z Cloudinary.",
+    link: "https://fabrykawarzyw.pl",
+    repoLink: "https://github.com/WasiakKacper/Fabryka-Warzyw",
+  },
 ];
