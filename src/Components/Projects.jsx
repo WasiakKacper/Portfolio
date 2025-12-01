@@ -3,13 +3,26 @@ import PropTypes from "prop-types";
 import { projectsData } from "./Data";
 
 const Project = (props) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
     <motion.div
-      className="w-[100%] h-99% lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mb-[5%] lg:mb-0 mt-10"
-      initial={{ translateY: 200, opacity: 0 }}
-      whileInView={{ translateY: 0, opacity: 1 }}
-      transition={{ duration: 0.2, delay: props.sleep }}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
+      transition={{ delay: props.sleep }}
+      className="w-[100%] h-99% lg:w-[30%] flex flex-col bg-(--white) p-[2%] lg:p-[0.8%] rounded-[1.5em] mb-[5%] lg:mb-0 mt-10"
     >
       <motion.img src={props.url} className="block rounded-[1em]" />
       <h3 className="text-3xl font-[Inter] my-[2%]">{props.title}</h3>
