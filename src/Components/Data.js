@@ -47,8 +47,15 @@ export const projectsData = [
   {
     url: "/Images/fabrykawarzyw.png",
     description:
-      "Sklep internetowy to nowoczesna strona umożliwiająca przeglądanie, filtrowanie i zamawianie produktów dostępnych w ofercie. Została stworzona w React z wykorzystaniem Tailwind CSS. Backend oparty na Express i MongoDB obsługuje rejestrację, logowanie użytkowników oraz zarządzanie produktami. Zdjęcia są przesyłane i przechowywane dzięki integracji z Cloudinary.",
+      "Fabryka Warzyw to sklep internetowy umożliwiający przeglądanie, filtrowanie i zamawianie produktów dostępnych w ofercie. Została stworzona w React z wykorzystaniem Tailwind CSS. Backend oparty na Express i MongoDB obsługuje rejestrację, logowanie użytkowników oraz zarządzanie produktami. Zdjęcia są przesyłane i przechowywane dzięki integracji z Amazon AWS.",
     link: "https://fabrykawarzyw.pl",
     repoLink: "https://github.com/WasiakKacper/Fabryka-Warzyw",
+  },
+  {
+    url: "/Images/control.png",
+    description:
+      "Control to powstający projekt aplikacji do śledzenia postępów zadań. Aktualnie dostępna jest strona główna stworzona w React z użyciem TypeScriptu i SCSS, która stanowi podstawę pod dalszy rozwój. Docelowo aplikacja umożliwi zarządzanie zadaniami, monitorowanie statusów oraz pracę w przejrzystym i intuicyjnym interfejsie.",
+    link: "#",
+    repoLink: "https://github.com/WasiakKacper/Control",
   },
 ];
