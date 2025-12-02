@@ -32,7 +32,7 @@ export const projectsData = [
   {
     url: "/Images/todolist.png",
     description:
-      "Aplikacja ToDoList to proste i intuicyjne narzędzie do zarządzania zadaniami. Została stworzona w React z wykorzystaniem CSS, a dodane zadania są zapisywane w pamięci przeglądarki, dzięki czemu pozostają dostępne nawet po zamknięciu strony.",
+      "Aplikacja ToDoList to proste i intuicyjne narzędzie do zarządzania zadaniami. Została stworzona w JS i HTML z wykorzystaniem CSS, a dodane zadania są zapisywane w pamięci przeglądarki, dzięki czemu pozostają dostępne nawet po zamknięciu strony.",
     link: "https://todolist-kacper-wasiak.netlify.app/",
     repoLink: "https://github.com/WasiakKacper/ToDoList",
   },
@@ -40,7 +40,7 @@ export const projectsData = [
   {
     url: "/Images/weather.png",
     description:
-      "Aplikacja pogodowa to intuicyjne narzędzie umożliwiające sprawdzenie aktualnej pogody w dowolnym mieście podanym przez użytkownika. Została stworzona w React i CSS.Dane o pogodzie, takie jak temperatura, wilgotność czy warunki atmosferyczne, pobierane są w czasie rzeczywistym dzięki integracji z OpenWeather API.",
+      "Aplikacja pogodowa to intuicyjne narzędzie umożliwiające sprawdzenie aktualnej pogody w dowolnym mieście podanym przez użytkownika. Została stworzona w HTML, JS i CSS.Dane o pogodzie, takie jak temperatura, wilgotność czy warunki atmosferyczne, pobierane są w czasie rzeczywistym dzięki integracji z OpenWeather API.",
     link: "https://weather-kacperwasiak.netlify.app/",
     repoLink: "https://github.com/WasiakKacper/Weather",
   },
